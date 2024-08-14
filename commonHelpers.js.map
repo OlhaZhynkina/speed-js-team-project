@@ -1,0 +1,1 @@
+{"version":3,"file":"commonHelpers.js","sources":["../src/js/api.js"],"sourcesContent":["import axios from 'axios';\n\naxios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';\n"],"names":["axios"],"mappings":"svBAEAA,EAAM,SAAS,QAAU"}
