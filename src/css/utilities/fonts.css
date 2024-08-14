@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'ExtraBold';
+  src: url('../../fonts/InterTight/InterTight-ExtraBold.ttf');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Black';
+  src: url('../../fonts/InterTight/InterTight-Black.ttf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('../../fonts/InterTight/InterTight-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'SemiBold';
+  src: url('../../fonts/InterTight/InterTight-SemiBold.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Medium';
+  src: url('../../fonts/InterTight/InterTight-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Regular';
+  src: url('../../fonts/InterTight/InterTight-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Thin';
+  src: url('../../fonts/InterTight/InterTight-Thin.ttf');
+  font-weight: 300;
+}

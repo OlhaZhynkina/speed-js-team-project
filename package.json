@@ -1,21 +1,28 @@
 {
-  "name": "vanilla-app-template",
+  "name": "speed-js-team-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/speed-js-team-project/",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.5.2",
-    "glob": "^8.1.0"
+    "glob": "^11.0.0",
+    "vite": "^5.3.5"
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Olha Zhynkina <olyasavvz@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "vite-plugin-full-reload": "^1.0.5",
-    "vite-plugin-html-inject": "^1.0.1"
+    "accordion-js": "^3.3.4",
+    "axios": "^1.7.3",
+    "fast-glob": "^3.3.2",
+    "inflight": "^1.0.6",
+    "izitoast": "^1.4.0",
+    "modern-normalize": "^3.0.0",
+    "simplelightbox": "^2.14.3",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
   }
 }
