@@ -1,3 +1,5 @@
+/* #region COMMON */
+
 .faq-title {
   margin-bottom: 32px;
 }
@@ -79,6 +81,8 @@
   align-items: center;
   transition: all 0.3s ease;
 }
+
+/* #endregion */
 
 /* #region DESKTOP */
 
