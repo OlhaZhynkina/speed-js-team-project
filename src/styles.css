@@ -4,21 +4,21 @@
   | default @import url()
   |============================
 */
-@import 'node_modules/modern-normalize/modern-normalize.css';
-@import url('./src/css/utilities/fonts.css');
-@import url('./src/css/utilities/variables.css');
+@import 'modern-normalize/modern-normalize.css';
+@import url('./css/utilities/fonts.css');
+@import url('./css/utilities/variables.css');
 
-@import url('./reset.css');
-@import url('./src/css/sections/header.css');
-@import url('./src/css/sections/hero.css');
-@import url('./src/css/sections/about.css');
-@import url('./src/css/sections/benefits.css');
-@import url('./src/css/sections/projects.css');
-@import url('./src/css/sections/faq.css');
-@import url('./src/css/sections/covers.css');
-@import url('./src/css/sections/reviews.css');
-@import url('./src/css/sections/work-together.css');
-@import url('./src/css/sections/change-theme.css');
+@import url('./css/base/reset.css');
+@import url('./css/sections/header.css');
+@import url('./css/sections/hero.css');
+@import url('./css/sections/about.css');
+@import url('./css/sections/benefits.css');
+@import url('./css/sections/projects.css');
+@import url('./css/sections/faq.css');
+@import url('./css/sections/covers.css');
+@import url('./css/sections/reviews.css');
+@import url('./css/sections/work-together.css');
+@import url('./css/sections/change-theme.css');
 
 * {
   box-sizing: border-box;
