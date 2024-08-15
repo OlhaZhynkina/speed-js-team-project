@@ -1,3 +1,8 @@
+.title-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
 .section {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -23,9 +28,9 @@
 }
 
 .marquee__line {
-  background-color: #ffdc00;
+  background-color: #ffdd0000;
   flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
