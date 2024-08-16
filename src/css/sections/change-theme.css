@@ -1,12 +1,101 @@
-@import url('./src/css/utilities/variables.css');
+/* .color-display {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} */
 
-body.day {
-  background-color: var(--bg-main);
-
-  color: var(--main-color);
+.g-color,
+.s-color {
+  /* width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); */
+  transition: background 0.3s;
 }
 
-body.night {
-  background-color: var(--red);
-  color: var(--main-color);
+.g-color {
+  /* background-color: #000000; */
+}
+
+.s-color {
+  /* border-radius: 50%;
+  background-color: #000000; */
+}
+
+.color-text {
+  /* font-size: 16px;
+  color: #000000; */
+  transition: color 0.3s;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-button {
+  width: 130px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: rgba(0, 0, 0, 0.212);
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s,
+    background-color 0.3s;
+
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.main-button:hover,
+.main-button:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.color-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 0;
+}
+
+.color-buttons.show {
+  transform: translateX(140px);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.color-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+  border-color: #fff;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
 }
