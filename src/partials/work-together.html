@@ -1,3 +1,77 @@
 <footer class="section" id="work">
-  <div class="container"></div>
+  <div class="container wt-container">
+    <img
+      class="wt-bg-image"
+      srcset="
+        ../img/img-work-together/wt-bg-1x.jpg 1x,
+        ../img/img-work-together/wt-bg-2x.jpg 2x
+      "
+      src="../img/img-work-together/wt-bg-1x.jpg"
+      alt="wt-background"
+    />
+    <h2 class="wt-title">
+      <picture class="work-img">
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ../img/img-work-together/lloyd-jefferson-tab-desk-1x-min.png 1x,
+            ../img/img-work-together/lloyd-jefferson-tab-desk-2x-min.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ../img/img-work-together/lloyd-jefferson-1x-min.png 1x,
+            ../img/img-work-together/lloyd-jefferson-2x-min.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          src="./img/img-work-together/lloyd-jefferson-1x-min.png"
+          alt="Lloyd Jefferson"
+          width="44"
+          height="44"
+          loading="lazy"
+        />
+      </picture>
+      Let’s <span class="title-highlight">work</span>together
+    </h2>
+    <form class="contact-form" action="" id="contact-form">
+      <p class="message-error" id="email-error">Invalid email, try again</p>
+      <input
+        class="wt-form-input"
+        type="email"
+        name="email"
+        id="email-input"
+        placeholder="clients@gmail.com"
+        required
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+      />
+      <input class="wt-form-input" type="text" placeholder="comments" />
+      <button class="wt-btn" type="submit">Send</button>
+    </form>
+    <div class="contact-info">
+      <a class="wt-contact" href="mailto:lloydjefferson@gmail.com"
+        >lloydjefferson@gmail.com</a
+      >
+      <a class="wt-contact" href="tel:+3801111111111">+380 11 1111 11 11</a>
+    </div>
+  </div>
+  <div class="wt-modal-overlay">
+    <div class="wt-modal-container">
+      <button class="wt-modal-close-btn" type="button">
+        <svg width="22" height="22">
+          <use href="../img/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="wt-modal-title">
+        Thank you for your interest in cooperation!
+      </h2>
+      <p class="wt-modal-info">
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+    </div>
+  </div>
 </footer>
