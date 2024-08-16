@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: flex-start;
   border-radius: 20px;
-  background: #242527;
+  background: var(--bg-cards);
 }
 
 .benefits-item-lime {
@@ -75,6 +75,12 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
+  cursor: pointer;
+}
+
+.benefits-btn:hover {
+  border-color: var(--lime);
+  color: var(--lime);
 }
 
 /* =======================TABLET=========================== */
