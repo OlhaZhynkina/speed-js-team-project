@@ -1,3 +1,5 @@
+@import url('./src/css/utilities/variables.css');
+
 body.day {
   background-color: var(--bg-main);
 
