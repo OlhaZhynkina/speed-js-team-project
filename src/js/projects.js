@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 const swiper = new Swiper('.swiper', {
@@ -12,5 +11,3 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-console.log(swiper);
