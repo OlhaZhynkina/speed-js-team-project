@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Speed JS</title>
     <script type="module" crossorigin src="/speed-js-team-project/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/speed-js-team-project/assets/vendor-D_6Yt5IS.js">
-    <link rel="stylesheet" crossorigin href="/speed-js-team-project/assets/vendor-BgSUlpTu.css">
-    <link rel="stylesheet" crossorigin href="/speed-js-team-project/assets/index-MJSQOC18.css">
+    <link rel="modulepreload" crossorigin href="/speed-js-team-project/assets/vendor-DrBJYnif.js">
+    <link rel="stylesheet" crossorigin href="/speed-js-team-project/assets/vendor-dsesobIH.css">
+    <link rel="stylesheet" crossorigin href="/speed-js-team-project/assets/index-CrEypdzA.css">
   </head>
   <body>
     <header class="header">
@@ -127,12 +127,24 @@
               </div>
             </div>
             <div class="item-flex-container-bottom">
-              <img
-                class="item-img"
-                src="/speed-js-team-project/assets/image-mob-readJourney-0cwCFgC3.jpg"
-                alt="Read Journey"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/speed-js-team-project/assets/image-tab-pc-readJourney-CzOZXjCh.jpg 1x, /speed-js-team-project/assets/image-tab-pc-readJourney-2@-VCsewf3I.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 320px)"
+                  srcset="/speed-js-team-project/assets/image-mob-readJourney-0cwCFgC3.jpg 1x, /speed-js-team-project/assets/image-mob-readJourney-2@-BzXvbXDZ.jpg 2x"
+                />
+
+                <img
+                  class="item-img"
+                  src="/speed-js-team-project/assets/image-mob-readJourney-0cwCFgC3.jpg"
+                  alt="Read Journey"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </li>
@@ -158,12 +170,23 @@
               </div>
             </div>
             <div class="item-flex-container-bottom">
-              <img
-                class="item-img"
-                src="/speed-js-team-project/assets/image-mob-petLove-CNDHxBNq.jpg"
-                alt="Read Journey"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/speed-js-team-project/assets/image-tab-pc-petLove-DOefrw72.jpg 1x, /speed-js-team-project/assets/image-tab-pc-petLove-2@-Wn8W-Yp6.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 320px)"
+                  srcset="/speed-js-team-project/assets/image-mob-petLove-CNDHxBNq.jpg 1x, /speed-js-team-project/assets/image-mob-petLove-2@-DP8QX0C8.jpg 2x"
+                />
+                <img
+                  class="item-img"
+                  src="/speed-js-team-project/assets/image-mob-petLove-CNDHxBNq.jpg"
+                  alt="Read Journey"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </li>
@@ -189,21 +212,43 @@
               </div>
             </div>
             <div class="item-flex-container-bottom">
-              <img
-                class="item-img"
-                src="/speed-js-team-project/assets/image-mob-VocabBuilder-ZimbDl0k.jpg"
-                alt="Read Journey"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/speed-js-team-project/assets/image-tab-pc-VocabBuilder-DZrBFQ2x.jpg 1x, /speed-js-team-project/assets/image-tab-pc-VocabBuilder-2@-CHeaNhmP.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 320px)"
+                  srcset="/speed-js-team-project/assets/image-mob-VocabBuilder-ZimbDl0k.jpg 1x, /speed-js-team-project/assets/image-mob-VocabBuilder-2@-CBf5uS0t.jpg 2x"
+                />
+                <img
+                  class="item-img"
+                  src="/speed-js-team-project/assets/image-mob-VocabBuilder-ZimbDl0k.jpg"
+                  alt="Read Journey"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </li>
       </ul>
-      <button class="swiper-button-prev">Prev</button>
-      <button class="swiper-button-next">Next</button>
+      <div class="position-container">
+        <button class="swiper-button-prev button">
+          <svg class="swiper-button-svg flip-arrow" width="20" height="20">
+            <use href="/speed-js-team-project/assets/icons-Bd5-eoKB.svg#arrow-narrow-right"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next button">
+          <svg class="swiper-button-svg" width="20" height="20">
+            <use
+              href="/speed-js-team-project/assets/icons-Bd5-eoKB.svg#arrow-narrow-right"
+              style="stroke: #ffffff"
+            ></use>
+          </svg>
+        </button>
+      </div>
     </div>
-
-    <div class="swiper-navigation"></div>
   </div>
 </section>
 
