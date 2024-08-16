@@ -1,6 +1,6 @@
-.section {
+.covers-section {
   background-color: var(--bg-main);
-  background-image: url(/src/img/background/background-1x.png);
+  background-image: url(./src/img/background/background-1x.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,7 +9,7 @@
   (min-resolution: 2dppx),
   (min-resolution: 192dpi) {
   .effect {
-    background-image: url(/src/img/background/background-2x.png);
+    background-image: url(./src/img/background/background-2x.png);
   }
 }
 .title-hidden {
@@ -17,17 +17,16 @@
   pointer-events: none;
   visibility: hidden;
 }
-.pic-mobile {
-}
+
 .section {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.content {
+/* .content {
   position: relative;
-}
+} */
 .marquee {
-  position: absolute;
+  /* position: absolute; */
   right: -800px;
   left: 0;
   overflow: hidden;
@@ -58,10 +57,10 @@
   width: 544px;
   height: 314px;
   white-space: nowrap;
-  /* animation-name: marqueeLine;
+  animation-name: marqueeLine;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; */
+  animation-iteration-count: infinite;
 }
 picture,
 img {
