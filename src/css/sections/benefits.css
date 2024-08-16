@@ -75,6 +75,12 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
+  cursor: pointer;
+}
+
+.benefits-btn:hover {
+  border-color: var(--lime);
+  color: var(--lime);
 }
 
 /* =======================TABLET=========================== */

@@ -26,12 +26,30 @@
               </div>
             </div>
             <div class="item-flex-container-bottom">
-              <img
-                class="item-img"
-                src="./img/projects-img/image-mob-readJourney.jpg"
-                alt="Read Journey"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/projects-img/image-tab-pc-readJourney.jpg    1x,
+                    ./img/projects-img/image-tab-pc-readJourney-2@.jpg 2x
+                  "
+                />
+
+                <source
+                  media="(min-width: 320px)"
+                  srcset="
+                    ./img/projects-img/image-mob-readJourney.jpg    1x,
+                    ./img/projects-img/image-mob-readJourney-2@.jpg 2x
+                  "
+                />
+
+                <img
+                  class="item-img"
+                  src="./img/projects-img/image-mob-readJourney.jpg"
+                  alt="Read Journey"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </li>
@@ -57,12 +75,29 @@
               </div>
             </div>
             <div class="item-flex-container-bottom">
-              <img
-                class="item-img"
-                src="./img/projects-img/image-mob-petLove.jpg"
-                alt="Read Journey"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/projects-img/image-tab-pc-petLove.jpg    1x,
+                    ./img/projects-img/image-tab-pc-petLove-2@.jpg 2x
+                  "
+                />
+
+                <source
+                  media="(min-width: 320px)"
+                  srcset="
+                    ./img/projects-img/image-mob-petLove.jpg    1x,
+                    ./img/projects-img/image-mob-petLove-2@.jpg 2x
+                  "
+                />
+                <img
+                  class="item-img"
+                  src="./img/projects-img/image-mob-petLove.jpg"
+                  alt="Read Journey"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </li>
@@ -88,20 +123,48 @@
               </div>
             </div>
             <div class="item-flex-container-bottom">
-              <img
-                class="item-img"
-                src="./img/projects-img/image-mob-VocabBuilder.jpg"
-                alt="Read Journey"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/projects-img/image-tab-pc-VocabBuilder.jpg    1x,
+                    ./img/projects-img/image-tab-pc-VocabBuilder-2@.jpg 2x
+                  "
+                />
+
+                <source
+                  media="(min-width: 320px)"
+                  srcset="
+                    ./img/projects-img/image-mob-VocabBuilder.jpg    1x,
+                    ./img/projects-img/image-mob-VocabBuilder-2@.jpg 2x
+                  "
+                />
+                <img
+                  class="item-img"
+                  src="./img/projects-img/image-mob-VocabBuilder.jpg"
+                  alt="Read Journey"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </li>
       </ul>
-      <button class="swiper-button-prev">Prev</button>
-      <button class="swiper-button-next">Next</button>
+      <div class="position-container">
+        <button class="swiper-button-prev button">
+          <svg class="swiper-button-svg flip-arrow" width="20" height="20">
+            <use href="./img/icons.svg#arrow-narrow-right "></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next button">
+          <svg class="swiper-button-svg" width="20" height="20">
+            <use
+              href="./img/icons.svg#arrow-narrow-right"
+              style="stroke: #ffffff"
+            ></use>
+          </svg>
+        </button>
+      </div>
     </div>
-
-    <div class="swiper-navigation"></div>
   </div>
 </section>
