@@ -2,7 +2,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
-    background-image: url(/src/img/hero/hero.jpg);
+    background-image: url(./src/img/hero/hero.jpg);
     background-position: center;
     color: var(--text);
 
@@ -14,7 +14,7 @@
   
   .hero-title {
     text-align: start;
-    margin: 246px auto 227px;
+    margin: auto;
   }
   
   .hero-info {
