@@ -1,0 +1,10 @@
+body.day {
+  background-color: var(--bg-main);
+
+  color: var(--main-color);
+}
+
+body.night {
+  background-color: var(--red);
+  color: var(--main-color);
+}
