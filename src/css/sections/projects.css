@@ -87,6 +87,11 @@
   background-color: var(--lime);
 }
 
+.item-button-link:hover,
+.item-button-link:focus {
+  background-color: #b2cc28;
+}
+
 .item-flex-container-bottom {
   background-color: var(--bg-cards);
   padding: 100px 16px;
@@ -105,21 +110,26 @@
   align-items: center;
 }
 
-.button {
+.position-container .button {
   border: 1px solid rgba(250, 250, 250, 0.5);
+
   border-radius: 60px;
   padding: 14px;
   width: 52px;
   height: 52px;
-  /* background-color: transparent; */
+  background-color: transparent;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-button-svg {
-  stroke: #ff5733;
+.position-container .button:disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.position-container .button:disabled .swiper-button-svg {
+  stroke: var(--bg-cards);
 }
 
 @media screen and (min-width: 768px) {
