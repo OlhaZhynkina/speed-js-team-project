@@ -54,3 +54,12 @@
 </symbol>
     </defs>
 </svg>
+
+<symbol id="icon-menu" viewBox="0 0 64 32">
+<path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M4 5.112h56M4 26.888h56"></path>
+</symbol>
+
+
+<!-- <symbol id="icon-menu" viewBox="0 0 32 32">
+<path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M4 11.334h24M4 20.666h24"></path>
+</symbol> -->
