@@ -74,8 +74,11 @@
   align-items: center;
   color: #fff;
 }
+.review-flip-arrow {
+  transform: scaleX(-1);
+}
 
-.review-btn-svg use {
+.review-btn-svg {
   stroke: #fff;
 }
 
