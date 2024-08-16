@@ -1,4 +1,4 @@
-import { axios } from 'axios';
+import axios from 'axios';
 
 const form = document.getElementById('contact-form');
 const emailInput = document.getElementById('email-input');
