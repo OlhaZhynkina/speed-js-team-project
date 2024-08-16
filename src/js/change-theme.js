@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const colorSquares = document.querySelectorAll('.g-color');
   const colorCircles = document.querySelectorAll('.s-color');
   const colorTexts = document.querySelectorAll('.color-text');
+  const svgElements = document.querySelectorAll('.c-svg');
 
   const gradients = {
     '#ed3b44':
@@ -34,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     colorTexts.forEach(text => {
       text.style.color = color;
+    });
+
+    svgElements.forEach(svg => {
+      svg.style.fill = color;
     });
   };
 
