@@ -122,25 +122,25 @@ footer .part-contact-info a:hover {
 /*Modal Window*/
 
 .modal {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed; /* Фиксированное позиционирование */
-  z-index: 1; /* Над другими элементами */
+  display: none;
+
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Полная ширина */
-  height: 100%; /* Полная высота */
-  overflow: auto; /* Если контент будет больше окна */
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* Центрирование */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Ширина модального окна */
-  max-width: 600px;
-  border-radius: 10px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px;
+  width: 492px;
+  height: 246px;
+  background: #1c1d20;
 }
 
 .close-modal {
