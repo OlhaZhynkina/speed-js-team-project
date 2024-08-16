@@ -1,17 +1,5 @@
 /* ==================MOBILE=========================== */
 
-.benefits-title {
-  color: var(--text-title);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.32px;
-  text-transform: uppercase;
-  margin-bottom: 32px;
-  min-width: 284px;
-}
-
 .benefits-list {
   display: flex;
   flex-direction: column;
