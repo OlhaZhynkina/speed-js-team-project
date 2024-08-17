@@ -1,16 +1,14 @@
 import { getReviews } from './api';
 
 import Swiper from 'swiper';
-import 'swiper/css';
 import { Navigation } from 'swiper/modules';
+import 'swiper/css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation],
-  // slidesPerView: 4,
-  // spaceBetween: 30,
   breakpoints: {
     // when window width is >= 320
     320: {
@@ -35,7 +33,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 const ulElement = document.querySelector('.js-list-reviews');
-// const errorMessage = document.querySelector('.error-message');
 
 function reviewMarkup({ author, avatar_url, review }) {
   return `<li class="item-review swiper-slide">
@@ -50,13 +47,12 @@ function reviewsMarkup(array) {
 }
 
 async function showReviews() {
-  // errorMessage.classList.remove('.hidden');
   try {
     const data = await getReviews();
     ulElement.innerHTML = reviewsMarkup(data.data);
   } catch (err) {
     console.log(err.status);
-    // errorMessage.classList.add('.hidden');
+
     iziToast.error({
       title: 'Error',
       titleColor: '#fff',
