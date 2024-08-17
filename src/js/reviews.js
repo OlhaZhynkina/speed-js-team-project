@@ -12,17 +12,17 @@ const swiper = new Swiper('.swiper', {
   // slidesPerView: 4,
   // spaceBetween: 30,
   breakpoints: {
-    // when window width is >= 320px
+    // when window width is >= 320
     320: {
       slidesPerView: 6,
       spaceBetween: 20,
     },
-    // when window width is >= 480px
+    // when window width is >= 768
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
-    // when window width is >= 640px
+    // when window width is >= 1440
     1440: {
       slidesPerView: 4,
       spaceBetween: 40,
@@ -39,7 +39,7 @@ const ulElement = document.querySelector('.js-list-reviews');
 
 function reviewMarkup({ author, avatar_url, review }) {
   return `<li class="item-review swiper-slide">
-            <img src="${avatar_url}" class="img-review" alt="image" />
+           <img src="${avatar_url}" class="img-review" alt="image" />
            <h3 class="name-review">${author}</h3>
            <p class="text-review">${review}</p>
           </li>`;
