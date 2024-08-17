@@ -1,7 +1,44 @@
 <header class="header">
-  <div class="container">
+  <div class="container header-container">
     <img src="./img/logo.png" alt="Lloyd Jefferson" class="header-logo-img">
-    <p>jefferson*</p>
-    <svg class="icon header-menu-icon"><use href="./img/icons.svg#icon-menu"></use></svg>
+    <p class="header-logo-text">jefferson*</p>
+    <nav class="header-nav">
+      <a class="header-menu">Menu</a>
+    </nav>
+    <button type="button" class="header-order-btn"></button>
+    <button type="button" class="header-modal-btn" aria-label="Modal menu open button">
+      <svg class="icon header-menu-icon" aria-hidden="true">
+        <use href="./img/icons.svg#icon-menu">
+        </use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="header-modal-window">
+    <div class="header-modal-container">
+      <button type="button" class="header-modal-close">X
+        <svg class="header-menu-close-icon" aria-hidden="true">
+          <use href="./img/icons.svg#icon-close">
+          </use>
+        </svg>
+      </button>
+      <nav class="header-modal-nav">
+        <ul class="header-modal-ul">
+          <li class="header-modal-li">
+            <a href="#about-me" class="header-modal-anchor">About me</a>
+          </li>
+          <li class="header-modal-li">
+            <a href="#benefits" class="header-modal-anchor">Benefits</a>
+          </li>
+          <li class="header-modal-li">
+            <a href="#projects" class="header-modal-anchor">Projects</a>
+          </li>
+          <li class="header-modal-li">
+            <a href="#faq" class="header-modal-anchor">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#footer" class="header-modal-order-link">Order the project</a>
+    </div>
   </div>
 </header>

@@ -1,12 +1,132 @@
 .header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
 }
-.container {
+.header-container {
+    display: flex;
+    background: linear-gradient(90deg, rgba(198, 227, 39, 0.76) 100%, #596808 67.73%, #1c1d20 49.68%);
 }
 .header-logo-img {
     width: 80px;
     height: 80px;
+    border-radius: 18px;
+    margin-right: 8px;
 }
+
+.header-logo-text {
+    color:var(--text)
+}
+
+.header-modal-btn {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  line-height: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.header-menu-icon {
+    width: 24px;
+  height: 24px;
+  stroke-width: 0;
+  stroke: var(--text);
+  fill: var(--text);
+
+}
+
+.header-menu {
+    visibility: hidden;
+}
+
+.header-order-btn {
+    visibility: hidden;
+}
+
 .icon {
 }
 .header-menu-icon {
 }
+
+/*=====Modal window======*/
+
+.header-modal-window {
+    /* background-image: url('/src/img/background/modal-background.jpg');
+    background-repeat: no-repeat;  */
+    background-color: #1c1d20;
+    background-image: url('/src/img/background/modal-background.jpg');
+
+    background-size: cover; 
+    background-position: center; 
+    position: fixed; 
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    z-index: 1000; 
+   
+}
+.header-modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.header-modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    line-height: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    right: 16px;
+}
+
+.header-menu-close-icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 0;
+    stroke: var(--text);
+    fill: var(--text);
+}
+.header-modal-nav {
+}
+.header-modal-ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+.header-modal-li {
+}
+.header-modal-anchor {
+    color: var(--text);
+}
+.header-modal-order-link {
+    color: var(--text);
+    position: absolute;
+    bottom: 32px;
+}
+
