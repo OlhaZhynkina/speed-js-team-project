@@ -8,6 +8,11 @@
   gap: 10px;
 } */
 
+/* html,
+body {
+  background-color: black;
+} */
+
 .g-color,
 .s-color {
   /* width: 60px;
@@ -32,7 +37,7 @@
   transition: color 0.3s;
 }
 
-.container {
+.btn-container {
   display: flex;
   align-items: center;
   position: relative;
@@ -40,11 +45,11 @@
 
 .main-button {
   width: 130px;
-  height: 60px;
+  height: 45px;
   border-radius: 60px;
   background-color: rgba(0, 0, 0, 0.212);
-  border: 2px solid white;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+
   cursor: pointer;
   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s,
     background-color 0.3s;
@@ -53,7 +58,7 @@
   z-index: 1;
   color: white;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -0.02em;
 }
 
@@ -83,19 +88,108 @@
 }
 
 .color-button {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  border: 1px solid transparent;
   cursor: pointer;
-  transform: scale(1);
+
   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
   position: relative;
 }
 
+.color-button:active,
+.color-button:focus,
 .color-button:hover {
-  transform: scale(1.1);
   border-color: #fff;
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (min-width: 768px) {
+  .main-button {
+    width: 130px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: rgba(0, 0, 0, 0.212);
+
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s,
+      background-color 0.3s;
+
+    position: relative;
+    z-index: 1;
+
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .main-button:hover,
+  .main-button:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .color-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 0;
+  }
+
+  .color-buttons.show {
+    transform: translateX(140px);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .color-button {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-button {
+    border-radius: 60px;
+    background-color: rgba(0, 0, 0, 0.212);
+    border: 1px solid white;
+
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s,
+      background-color 0.3s;
+
+    position: relative;
+    z-index: 1;
+
+    font-size: 16px;
+  }
+
+  .main-button:hover,
+  .main-button:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .color-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 0;
+  }
+
+  .color-buttons.show {
+    transform: translateX(140px);
+    opacity: 1;
+    pointer-events: all;
+  }
 }
