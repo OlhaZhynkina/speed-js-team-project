@@ -1,22 +1,44 @@
-.hero {
+
+  .hero {
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
-    background-image: url(./src/img/hero/hero.jpg);
-    background-position: center;
+    background-image: url(./src/img/projects-img/hero_green_desktop_1x.png);
     color: var(--text);
+    background-color: var(--lime);
+   max-height: 900px;
+   max-width: 1440px;
+    
+  }
+    .hero-title {
+      text-align: start ;
+      margin-top: auto; 
+      letter-spacing: -0.03em;
+      max-width: 1084px;
+      max-height: 270px;
+      font-weight: 500;
+      font-size: 90px;
+      line-height: 90px;
+      letter-spacing: -0.03em;
+      max-width: 1084px;
+      max-height: 270px;
+      
+    }
+    @media  screen and (min-width: 768px) {
+      .hero-title {
+        text-align: start;
+        margin: 188px auto 187px;
+      }
+    }
+    
+    @media screen and (min-width: 1440px) {
+      .hero-title {
+        text-align: start;
+        margin: 188px auto 243px;
+        width: 1140px;
+      }
+    }
 
-  }
-  
-  .hero-wrapper {
-    padding-block: 32px;
-  }
-  
-  .hero-title {
-    text-align: start;
-    margin: auto;
-  }
-  
   .hero-info {
     display: flex;
     justify-content: end;
@@ -40,7 +62,7 @@
   .hero-item:hover,
   .hero-item:focus,
   .hero-item:active {
-    border-color: var(--text);
+    border-color: var(--lime);
   }
   
   .social-link {
@@ -56,7 +78,12 @@
       min-width: 55px;
       min-height: 55px;
     }
-  
+    @media screen and (min-width: 768px) {
+      .social-link {
+        min-width: 55px;
+        min-height: 55px;
+      }
+    }
   
   .heder-contact-info {
     border-radius: 60px;
@@ -67,7 +94,7 @@
   .heder-contact-info:hover,
   .heder-contact-info:focus,
   .heder-contact-info:active {
-    border-color: var(--text);
+    border-color: var(--lime);
   }
   
   .heder-contact-info-link {
@@ -83,4 +110,12 @@
       min-width: 223px;
       min-height: 55px;
     }
- 
+
+  
+  
+    @media screen and (min-width: 768px) {
+      .heder-contact-info-link {
+        min-width: 223px;
+        min-height: 55px;
+      }
+    }    
