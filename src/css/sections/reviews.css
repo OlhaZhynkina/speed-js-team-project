@@ -81,7 +81,6 @@
 
 .review-btn-container .review-btn:disabled .review-btn-svg {
   stroke: var(--bg-cards);
-  /* stroke: red; */
 }
 
 @media screen and (min-width: 768px) {
