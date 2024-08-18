@@ -1,10 +1,11 @@
 .header {
     padding-top: 32px;
     padding-bottom: 32px;
+    position: absolute;
 }
 .header-container {
     display: flex;
-    background: linear-gradient(90deg, rgba(198, 227, 39, 0.76) 0%, #596808 32%, #1c1d20 50%);
+    background: transparent;
     position: relative;
 }
 
@@ -95,11 +96,13 @@ cursor: pointer;
    
 }
 .header-modal-container {
-    background: linear-gradient(90deg,
-    var(--lime-hover) 0%,
-    #596808 32%,
-    var(--bg-main) 50%);
-    backdrop-filter: blur(10px);
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay; */
+    /* background: url('../img/background/glass-effect.png') no-repeat center center/cover; */
+    background:
+    linear-gradient(90deg, var(--lime-hover) 0%, #596808 32%, var(--bg-main) 50%); 
+    /* backdrop-filter: blur(10px); */
     /* background-size: 200% 100%;  */
     display: flex;
     flex-direction: column;
@@ -111,17 +114,25 @@ cursor: pointer;
     position: relative;
 }
 
-.header-modal-container::before {
-    content:''; 
-    position: absolute; 
+
+/* .header-modal-container::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
-    background: url('/src/img/background/glass-effect.png') no-repeat center;
-    opacity:0.3 ; 
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0.9; 
+    z-index: 1; 
+    pointer-events: none; 
+    background-blend-mode: overlay;
 }
+
+.header-modal-container * {
+    position: relative;
+    z-index: 2;
+} */
 
 .header-modal-close {
     display: flex;
@@ -173,7 +184,7 @@ text-decoration-skip-ink: none;
     color: var(--text);
     position: absolute;
     bottom: 32px;
-    background-color: var(--red);
+    background-color: var(--lime);
     width: 164px;
     height: 45px;
     border-radius: 60px;
@@ -228,7 +239,7 @@ padding: 10px;
 .header-order-btn {
     display: flex;
     color: var(--text);
-    background-color: var(--red);
+    background-color: var(--lime);
     width: 163px;
     height: 55px;
     border-radius: 60px;
