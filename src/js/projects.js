@@ -18,5 +18,3 @@ const swiperProjects = new Swiper('.swiper', {
     pageUpDown: true,
   },
 });
-
-console.log('Swiper has been initialized', swiper);
