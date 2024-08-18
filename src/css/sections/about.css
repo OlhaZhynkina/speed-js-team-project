@@ -11,11 +11,6 @@
   overflow: hidden;
 }
 
-.container-about {
-  display: flex;
-  margin-bottom: 32px;
-}
-
 .about-list {
   display: flex;
   flex-direction: column;
@@ -49,10 +44,6 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-.ideas-item {
-  border-radius: 24px;
-}
-
 .about-img {
   border-radius: 24px;
   width: 343px;
@@ -60,104 +51,99 @@
 }
 
 .about {
-  width: 343px;
-  margin-top: 20px;
-  border-bottom: 1px solid var(--bg-arrows);
-  padding-bottom: 1rem;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
 }
 
-.about-me {
+.ac.about-me {
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  background-color: #1c1d20;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.ac .ac-trigger.about-btn {
+  color: var(--text);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 0;
 }
 
-.about-class {
+.ac .ac-trigger.about-btn:hover .about-container-btn {
+  border-color: rgba(250, 250, 250, 0.9);
+}
+
+.ac .ac-trigger.about-btn:focus {
+  color: var(--text);
+}
+
+.ac .ac-panel .ac-text.about-class-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.ac .ac-trigger.about-btn::after {
+  display: none;
+}
+
+.ac.about-me.is-active .ac-header.about-class .about-icon {
+  transform: rotate(180deg);
+}
+
+.about-btn-text {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .about-icon {
+  transition: all 0.5s ease-in-out;
+  stroke: var(--text);
+}
+
+.about-container-btn {
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  padding: 10px;
-  width: 36px;
-  height: 36px;
-}
-
-.about-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1.4s ease;
-}
-
-.about-class-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  width: 343px;
-}
-
-.about.active .about-content {
-  max-height: 612px;
-}
-
-.about.active svg {
-  transform: rotate(180deg);
-}
-
-svg {
-  transition: transform 0.5s ease-in;
-}
-
-.role-list {
-  width: 284px;
+  border-radius: 50%;
+  padding: 7px;
+  width: 34px;
+  height: 34px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
-.role-skills {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: var(--text);
-}
-
-.education-list {
-  width: 342px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.education-study {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: var(--text);
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 32px;
 }
 
 .swiper-wrapper {
+  display: flex;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .swiper-list {
-  margin-top: 32px;
-  width: 1000px;
-  display: flex;
-  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .swiper-skills {
@@ -175,24 +161,12 @@ svg {
 }
 
 @media screen and (min-width: 768px) {
-  .container-about {
-    display: flex;
-    margin-bottom: 96px;
-  }
-
-  .about-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
   .about-list-text {
     width: 704px;
     height: 700px;
   }
 
   .about-text {
-    font-weight: 500;
     font-size: 38px;
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -203,7 +177,6 @@ svg {
 
   .about-class-text {
     width: 576px;
-    display: flex;
   }
 
   .about-img {
@@ -213,58 +186,17 @@ svg {
   }
 
   .about {
-    width: 704px;
-    margin-top: 32px;
-    border-bottom: 1px solid var(--bg-arrows);
-    padding-bottom: 1rem;
-    cursor: pointer;
-  }
-
-  .about-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .about-class-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    width: 704px;
-  }
-
-  .role-list {
-    width: 284px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .education-list {
-    width: 435px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .swiper-list {
-    width: 1376px;
     margin-top: 64px;
+    margin-bottom: 64px;
   }
 
-  .swiper-skills {
-    font-size: 20px;
-    width: 200px;
-    height: 200px;
+  .ac.about-me {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .container-about {
-    display: flex;
-    margin-bottom: 96px;
-  }
-
   .about-list {
     display: flex;
     flex-direction: row;
@@ -277,60 +209,34 @@ svg {
   }
 
   .about-text {
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
     margin-top: 64px;
     margin-left: 64px;
     width: 553px;
   }
 
   .about-img {
-    border-radius: 24px;
     width: 680px;
     height: 700px;
   }
 
   .about {
-    width: 1376px;
-    margin-top: 32px;
-    border-bottom: 1px solid var(--bg-arrows);
-    padding-bottom: 1rem;
-    cursor: pointer;
-  }
-
-  .about-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .about-class-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    width: 612px;
-    margin-left: 696px;
-  }
-
-  .role-list {
-    width: 284px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 696px;
-  }
-
-  .education-list {
-    width: 435px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 696px;
-  }
-
-  .swiper-list {
     margin-top: 96px;
+    margin-bottom: 96px;
+  }
+
+  .ac.about-me {
+    width: 1376px;
+  }
+
+  .about-content {
+    padding-left: 656px;
+  }
+
+  .about-p {
+    width: 629px;
+  }
+
+  .education-list-t {
+    width: 465px;
   }
 }
