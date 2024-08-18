@@ -1,0 +1,252 @@
+.header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.header-container {
+    display: flex;
+    background: linear-gradient(90deg, rgba(198, 227, 39, 0.76) 0%, #596808 32%, #1c1d20 50%);
+    position: relative;
+}
+
+.header-main-link{
+cursor: pointer;
+}
+
+.header-logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+}
+
+.header-logo-text {
+    color:var(--text);
+    align-self: start;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-hidden-menu {
+    display: none;
+}
+
+.header-modal-btn {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  line-height: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.header-menu-icon {
+    width: 24px;
+  height: 24px;
+  stroke-width: 0;
+  stroke: var(--text);
+  fill: var(--text);
+
+}
+
+.header-menu {
+    display: none;
+}
+
+.header-order-btn {
+    display: none;
+}
+
+.icon {
+}
+.header-menu-icon {
+}
+
+/*=====Modal window======*/
+
+.header-modal-window {
+    background-position: center; 
+    position: fixed; 
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    z-index: 1000; 
+   
+}
+.header-modal-container {
+    background: linear-gradient(90deg,
+    var(--lime-hover) 0%,
+    #596808 32%,
+    var(--bg-main) 50%);
+    backdrop-filter: blur(10px);
+    /* background-size: 200% 100%;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.header-modal-container::before {
+    content:''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: url('/src/img/background/glass-effect.png') no-repeat center;
+    opacity:0.3 ; 
+    pointer-events: none;
+}
+
+.header-modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    line-height: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    right: 16px;
+}
+
+.header-menu-close-icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 0;
+    stroke: var(--text);
+    fill: var(--text);
+}
+
+.header-modal-nav {
+}
+
+.header-modal-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header-modal-li {
+}
+
+.header-modal-anchor {
+    color: var(--text);
+    font-weight: 500;
+font-size: 16px;
+letter-spacing: -0.02em;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+}
+
+.header-modal-order-link {
+    color: var(--text);
+    position: absolute;
+    bottom: 32px;
+    background-color: var(--red);
+    width: 164px;
+    height: 45px;
+    border-radius: 60px;
+    padding: 14px 31px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+
+.header {
+    width: 100%;
+}
+
+.header-container {
+    justify-content: space-between;
+}
+.header-menu { 
+    display: flex;
+    margin: 0 auto;
+    text-decoration: underline;
+text-decoration-skip-ink: none;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: -0.02em;
+color: var(--text);
+cursor: pointer;
+padding: 10px;
+}
+
+.header-hidden-menu {
+    position: absolute;
+    top: 42px;
+    opacity: 0;
+    transform: translateY(-20px);
+    display: none;
+}
+
+.header-hidden-menu.open {
+    display: flex;
+}
+
+.header-ul {
+}
+
+.header-li {
+    color: var(--text);
+    padding-bottom: 6px;
+}
+
+.header-order-btn {
+    display: flex;
+    color: var(--text);
+    background-color: var(--red);
+    width: 163px;
+    height: 55px;
+    border-radius: 60px;
+    padding: 18px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    margin-left: auto;
+}
+
+.header-modal-btn {
+    display: none;
+}
+}
+
+@media screen and (min-width: 1440px) {
+    
+}
+    
+
+
