@@ -54,13 +54,6 @@
   gap: 16px;
 }
 
-.message-error {
-  color: var(--red);
-  font-size: 14px;
-  margin-top: 8px;
-  display: none;
-}
-
 .wt-form-input {
   display: inline-flex;
   flex-direction: column;
@@ -87,6 +80,26 @@
 
 .wt-form-input.invalid {
   border-color: var(--red);
+}
+
+.wt-form-input.valid {
+  border-color: green;
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 14px;
+  margin-top: 4px;
+  display: none;
+  position: relative;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 8px;
+  display: none;
+  position: relative;
 }
 
 .wt-btn {
@@ -279,11 +292,13 @@
 
   .wt-bg-image {
     left: 860px;
+    position: absolute;
   }
 
   .wt-title {
     max-width: 524px;
     gap: 10px 20px;
+    padding-top: 80px;
   }
 
   .contact-form {

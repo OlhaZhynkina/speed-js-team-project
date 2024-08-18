@@ -38,7 +38,6 @@
       Let’s <span class="title-highlight">work</span>together
     </h2>
     <form class="contact-form" action="" id="contact-form">
-      <p class="message-error" id="email-error">Invalid email, try again</p>
       <input
         class="wt-form-input"
         type="email"
@@ -48,7 +47,15 @@
         required
         pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
       />
-      <input class="wt-form-input" type="text" placeholder="comments" />
+      <p class="error-message" id="email-error">Invalid email, try again</p>
+      <p class="success-message" id="email-success">Success!</p>
+      <input
+        class="wt-form-input"
+        type="text"
+        placeholder="comments"
+        name="comments"
+      />
+
       <button class="wt-btn" type="submit">Send</button>
     </form>
     <div class="contact-info">
