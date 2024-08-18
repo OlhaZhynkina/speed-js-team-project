@@ -38,7 +38,7 @@ form.addEventListener('submit', async function (event) {
   try {
     const data = {
       email: emailValue,
-      comments: formData.get('comments').trim(),
+      comment: formData.get('comments').trim(),
     };
 
     const response = await submitWorkTogetherForm(data);

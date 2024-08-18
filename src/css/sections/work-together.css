@@ -12,7 +12,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
 
 .wt-bg-image {
@@ -22,6 +22,11 @@
 }
 
 /*Part title*/
+
+.work-img {
+  width: 44px;
+  height: 44px;
+}
 
 .wt-title {
   color: var(--text);
@@ -205,6 +210,11 @@
     left: 570px;
   }
 
+  .work-img {
+    width: 70px;
+    height: 70px;
+  }
+
   .wt-title {
     font-size: 64px;
     line-height: 64px;
@@ -264,6 +274,7 @@
 @media screen and (min-width: 1440px) {
   .wt-container {
     margin-top: 164px;
+    margin-bottom: 169px;
   }
 
   .wt-bg-image {
