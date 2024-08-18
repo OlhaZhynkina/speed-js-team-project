@@ -68,7 +68,14 @@ function checkStatus() {
     ? 'none'
     : 'block';
 }
-checkStatus();
+
+const closeIntervalID = setInterval(() => {
+  checkStatus();
+}, 10);
+
+setTimeout(() => {
+  clearInterval(closeIntervalID);
+}, 1000);
 
 reviewBtnNext.addEventListener('click', checkStatus);
 reviewBtnPrev.addEventListener('click', checkStatus);
