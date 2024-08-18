@@ -7,41 +7,56 @@ import 'swiper/css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const swiper = new Swiper('.swiper', {
-  modules: [Navigation],
-  // breakpoints: {
-  //   // when window width is >= 320
-  //   320: {
-  //     slidesPerView: 6,
-  //     spaceBetween: 20,
-  //   },
-  //   // when window width is >= 768
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 30,
-  //   },
-  //   // when window width is >= 1440
-  //   1440: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40,
-  //   },
-  // },
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  a11y: {
-    prevSlideMessage: 'Previous slide',
-    nextSlideMessage: 'Next slide',
-  },
-  grabCursor: true,
-});
+function reviewWapper(arrayLength) {
+  new Swiper('.swiper', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      // when window width is >= 320
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 768
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      // when window width is >= 1440
+      1440: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+    },
+
+    navigation: {
+      nextEl: '.review-btn-next',
+      prevEl: '.review-btn-prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    on: {
+      slideChange: function () {
+        if (this.activeIndex >= arrayLength) {
+          // Обмежити перегляд 10 слайдів
+          this.slideTo(arrayLength, 0); // Зупинити на 10-му слайді
+        }
+      },
+      reachEnd: function () {
+        // Вимкнути кнопку "next" при досягненні кінця
+        document.querySelector('.review-hidden-next').classList.add('disabled');
+      },
+      reachBeginning: function () {
+        // Вимкнути кнопку "prev" при досягненні початку
+        document.querySelector('.review-btn-prev').classList.add('disabled');
+      },
+    },
+  });
+}
 
 const ulElement = document.querySelector('.js-list-reviews');
 
@@ -61,6 +76,10 @@ async function showReviews() {
   try {
     const data = await getReviews();
     ulElement.innerHTML = reviewsMarkup(data.data);
+    if (data.data.length === 0) {
+      throw error;
+    }
+    reviewWapper(data.data.length);
   } catch (err) {
     console.log(err.status);
 
