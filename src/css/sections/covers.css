@@ -1,8 +1,6 @@
 .covers-section {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100vh;
 }
 .title-hidden {
   position: absolute;
@@ -58,26 +56,22 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.content {
-  position: relative;
-}
-*/ .marquee {
-  position: relative;
-}
 
+.marquee {
+  overflow: hidden;
+}
+/* тут работаю */
 .marquee__inner {
-  height: 100vh;
+  /* position: absolute; */
+  /* height: 200px; */
   /* overflow: hidden; */
   display: flex;
-  column-gap: 30px;
+  /* column-gap: 30px; */
   transform: rotate(16deg);
   width: 282px;
   height: 162px;
   margin-bottom: 50px;
   animation: none;
-}
-.marquee__inner.animate {
-  animation: marqueeMovement 20s linear infinite;
 }
 
 .marquee__line {
@@ -100,12 +94,15 @@
   width: 282px;
   height: 162px;
 }
+.marquee__inner.animate {
+  animation: marqueeMovement 11s linear infinite alternate;
+}
 @keyframes marqueeMovement {
   from {
-    transform: translateX(-20%) rotate(16deg);
+    transform: translateX(0) rotate(16deg);
   }
   to {
-    transform: translateX(-180%) rotate(16deg);
+    transform: translateX(-160%) rotate(16deg);
   }
 }
 
@@ -116,6 +113,7 @@
   .marquee__inner {
     width: 544px;
     height: 314px;
+    margin-bottom: 70px;
   }
   .default-img {
     width: 544px;
