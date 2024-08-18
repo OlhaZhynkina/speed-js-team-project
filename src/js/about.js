@@ -12,7 +12,7 @@ aboute.forEach(about => {
   });
 });
 
-const swiperAboute = new Swiper('.swiper-wrapper', {
+const swiperAboute = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
