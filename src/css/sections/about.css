@@ -175,12 +175,6 @@ svg {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    width: 100%;
-    padding: 0 16px;
-  }
-
   .section {
     margin-bottom: 96px;
   }
@@ -270,13 +264,6 @@ svg {
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    width: 1440px;
-    max-width: 1440px;
-    padding: 0 32px;
-    margin: 0 auto;
-  }
-
   .section {
     margin-bottom: 164px;
   }
