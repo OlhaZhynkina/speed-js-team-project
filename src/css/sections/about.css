@@ -40,7 +40,6 @@
   width: 343px;
   height: 500px;
   background-color: var(--bg-cards);
-  box-shadow: 0 0 8px var(--lime);
 }
 
 .about-text {
@@ -56,7 +55,7 @@
 }
 
 .colortext {
-  color: var(--red);
+  color: var(--lime);
 }
 
 .colortext-two {
@@ -65,7 +64,6 @@
 
 .ideas-item {
   border-radius: 24px;
-  box-shadow: 0 0 8px var(--lime);
 }
 
 .about-img {

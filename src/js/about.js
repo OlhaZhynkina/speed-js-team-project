@@ -2,6 +2,8 @@ import Swiper from 'swiper';
 
 import 'swiper/css';
 
+import { Navigation, Keyboard } from 'swiper/modules';
+
 const aboute = document.querySelectorAll('.about');
 
 aboute.forEach(about => {
@@ -10,7 +12,7 @@ aboute.forEach(about => {
   });
 });
 
-const swiper = new Swiper('.swiper-wrapper', {
+const swiperAboute = new Swiper('.swiper-wrapper', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
