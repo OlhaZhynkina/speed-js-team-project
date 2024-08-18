@@ -11,6 +11,11 @@
                 stroke-linejoin="round" fill="#00000000" />
         </symbol>
 
+                <symbol id="icon-arrow-narrow-left-dark" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M26.667 16h-21.333"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M13.333 24l-8-8 8-8"></path>
+</symbol>
+
         <symbol id="arrow-down-accordion" viewBox="0 0 32 32">
             <path fill="none" stroke="#fafafa" style="stroke:var(--color1, #fafafa)" stroke-width="3.2"
                 d="m24 12-8 8-8-8" />
@@ -59,5 +64,6 @@
                 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M24 8l-16 16"></path>
                 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 8l16 16"></path>
         </symbol>    
+
     </defs>
 </svg>
