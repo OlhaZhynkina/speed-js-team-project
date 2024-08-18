@@ -1,35 +1,42 @@
 @font-face {
-  font-family: 'ExtraBold';
-  src: url('../../fonts/InterTight/InterTight-ExtraBold.ttf');
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight-ExtraBold.ttf') format('truetype');
   font-weight: 900;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Black';
-  src: url('../../fonts/InterTight/InterTight-Black.ttf');
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight-Black.ttf') format('truetype');
   font-weight: 800;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Bold';
-  src: url('../../fonts/InterTight/InterTight-Bold.ttf');
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'SemiBold';
-  src: url('../../fonts/InterTight/InterTight-SemiBold.ttf');
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight-SemiBold.ttf') format('truetype');
   font-weight: 600;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Medium';
-  src: url('../../fonts/InterTight/InterTight-Medium.ttf');
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight-Medium.ttf') format('truetype');
   font-weight: 500;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Regular';
-  src: url('../../fonts/InterTight/InterTight-Regular.ttf');
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight-Regular.ttf') format('truetype');
   font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Thin';
-  src: url('../../fonts/InterTight/InterTight-Thin.ttf');
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight-Thin.ttf') format('truetype');
   font-weight: 300;
+  font-style: normal;
 }

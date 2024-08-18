@@ -1,0 +1,266 @@
+/*Part container*/
+.wt-container {
+  position: relative;
+}
+
+.wt-bg-image {
+  position: absolute;
+  left: 290px;
+  z-index: 0;
+}
+
+/*Part title*/
+
+.wt-title {
+  color: var(--text);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 62px;
+}
+
+.title-highlight {
+  color: var(--lime);
+}
+
+/*Part form*/
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message-error {
+  color: var(--red);
+  font-size: 14px;
+  margin-top: 8px;
+  display: none;
+}
+
+.wt-form-input {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: transparent;
+  padding-bottom: 20px;
+  color: rgba(250, 250, 250, 0.6);
+  letter-spacing: -0.32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wt-form-input:active,
+.wt-form-input:focus {
+  color: rgba(250, 250, 250, 1);
+  border: none;
+  border-bottom: 2px solid rgba(250, 250, 250, 0.5);
+  outline: none;
+}
+
+.wt-form-input.invalid {
+  border-color: var(--red);
+}
+
+.wt-btn {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-color: var(--lime);
+  border-radius: 50%;
+  border-color: transparent;
+  color: var(--text);
+  letter-spacing: -0.32px;
+  margin-top: 32px;
+  margin-bottom: 64px;
+  z-index: 2;
+}
+
+.wt-btn:active,
+.wt-btn:hover,
+.wt-btn:focus {
+  background-color: var(--lime-hover);
+}
+
+/*Part contact info*/
+
+.contact-info {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.wt-contact {
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  padding: 10px 12px;
+  z-index: 2;
+}
+
+.wt-contact:active,
+.wt-contact:focus,
+.wt-contact:hover {
+  border: 1px solid #fafafa;
+}
+
+/*Modal Window*/
+
+.wt-modal-overlay {
+  background: rgba(15, 15, 16, 0.6);
+  border: 1px rgba(250, 250, 250, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.wt-modal-container {
+  background: var(--Background, #1c1d20);
+  padding: 20px 20px 64px 32px;
+  border-radius: 20px;
+  border: 1px rgba(250, 250, 250, 0.1);
+  width: 343px;
+  min-height: 276px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-modal-close-btn {
+  background-color: transparent;
+  border: none;
+  stroke: #fafafa;
+  margin-left: 269px;
+  margin-bottom: 0;
+}
+
+.wt-modal-title {
+  color: #fafafa;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.4px;
+  text-transform: lowercase;
+}
+
+.wt-modal-title::first-letter {
+  text-transform: uppercase;
+}
+
+.wt-modal-info {
+  color: rgba(250, 250, 250, 0.6);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+@media screen and (min-width: 768px) {
+  .wt-bg-image {
+    left: 570px;
+  }
+
+  .wt-title {
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -1.92px;
+    margin-bottom: 64px;
+  }
+
+  .contact-form {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 78px;
+  }
+
+  .wt-form-input {
+    height: 44px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .wt-btn {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+
+  .contact-info {
+    gap: 8px;
+  }
+
+  .wt-contact {
+    padding: 18px 32px;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+
+  .wt-modal-container {
+    padding-left: 64px;
+    width: 492px;
+  }
+
+  .wt-modal-close-btn {
+    margin-left: 384px;
+  }
+
+  .wt-modal-title {
+    margin-right: 44px;
+  }
+
+  .wt-modal-info {
+    margin-right: 44px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wt-bg-image {
+    left: 860px;
+  }
+
+  .wt-title {
+    max-width: 524px;
+    gap: 10px 20px;
+  }
+
+  .contact-form {
+    gap: 32px;
+  }
+
+  .wt-form-input {
+    min-width: 390px;
+  }
+
+  .wt-btn {
+    margin-left: 54px;
+  }
+}
