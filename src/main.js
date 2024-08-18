@@ -7,3 +7,4 @@ import './js/faq';
 import './js/covers';
 import './js/reviews';
 import './js/work-together';
+import './js/scroll-up';
