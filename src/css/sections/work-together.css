@@ -286,8 +286,8 @@
 
 @media screen and (min-width: 1440px) {
   .wt-container {
-    margin-top: 164px !important;
-    margin-bottom: 169px !important;
+    margin-top: 164px;
+    margin-bottom: 169px;
   }
 
   .wt-background {
