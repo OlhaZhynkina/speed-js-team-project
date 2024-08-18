@@ -2,14 +2,6 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
-const aboute = document.querySelectorAll('.about');
-
-aboute.forEach(about => {
-  about.addEventListener('click', () => {
-    about.classList.toggle('active');
-  });
-});
-
 const swiperAboute = new Swiper('.swiper-container', {
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
