@@ -1,13 +1,13 @@
 
 @media only screen and (min-width: 768px) {
-  .container {
+  .container-hero {
     max-width: 768px;
     padding: 0 32px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .container {
+  .container-hero {
     max-width: 1440px;
   }
 }
