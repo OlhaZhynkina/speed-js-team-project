@@ -2,6 +2,8 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
+console.log('message');
+
 const swiperProjects = new Swiper('.swiper', {
   modules: [Navigation, Keyboard],
   slidesPerView: 1,
@@ -51,3 +53,13 @@ checkStatus();
 
 buttonNext.addEventListener('click', checkStatus);
 buttonPrev.addEventListener('click', checkStatus);
+
+document.addEventListener('touchstart', checkStatus);
+document.addEventListener('touchend', checkStatus);
+document.addEventListener('touchmove', checkStatus);
+
+document.addEventListener('keyup', event => {
+  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+    checkStatus();
+  }
+});
