@@ -175,10 +175,6 @@ svg {
 }
 
 @media screen and (min-width: 768px) {
-  .section {
-    margin-bottom: 96px;
-  }
-
   .container-about {
     display: flex;
     margin-bottom: 96px;
@@ -264,10 +260,6 @@ svg {
 }
 
 @media screen and (min-width: 1440px) {
-  .section {
-    margin-bottom: 164px;
-  }
-
   .container-about {
     display: flex;
     margin-bottom: 96px;
