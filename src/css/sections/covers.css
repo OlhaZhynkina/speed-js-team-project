@@ -1,26 +1,27 @@
 .covers-section {
   position: relative;
   overflow: hidden;
-  /* background-color: var(--bg-main);
-  background-image: url(../../img/background/background-1x.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx),
-  (min-resolution: 192dpi) {
-  .effect {
-    background-image: url(../../img/background/background-2x.png);
-  } */
+.title-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
+
 .circle {
   width: 300px;
   height: 300px;
-  background-color: rgba(198, 277, 39, 0.45);
+  background-color: var(--lime);
+  opacity: 0.45;
   border-radius: 50%;
   position: absolute;
-  filter: blur(30px);
+  filter: blur(40px);
 }
 
 .circle-1 {
@@ -59,60 +60,56 @@
 }
 .content {
   position: relative;
-  /* overflow: hidden; */
 }
-/* .marquee {
-
-} */
+*/ .marquee {
+  position: relative;
+}
 
 .marquee__inner {
   height: 100vh;
+  /* overflow: hidden; */
   display: flex;
   column-gap: 30px;
   transform: rotate(16deg);
   width: 282px;
   height: 162px;
   margin-bottom: 50px;
+  animation: none;
+}
+.marquee__inner.animate {
+  animation: marqueeMovement 20s linear infinite;
 }
 
 .marquee__line {
+  width: 100%;
+  height: 100%;
   background-color: transparent;
+  display: inline-block;
   flex-shrink: 0;
   margin-right: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100%;
 
   white-space: nowrap;
-  animation-name: marqueeLine;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 .marquee__line:last-child {
   margin-right: 0;
 }
-
-/* @keyframes marqueeLine {
-  from {
-    transform: translateX(-20%);
-  }
-
-  to {
-    transform: translateX(-180%);
-  }
-} */
-picture,
-img {
-  width: 100%;
-  height: 100%;
+.default-img {
+  width: 282px;
+  height: 162px;
 }
-@media screen and (min-width: 768px) {
-  .section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+@keyframes marqueeMovement {
+  from {
+    transform: translateX(-20%) rotate(16deg);
   }
+  to {
+    transform: translateX(-180%) rotate(16deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
   .covers-container {
     max-width: 768px;
   }
@@ -120,12 +117,12 @@ img {
     width: 544px;
     height: 314px;
   }
+  .default-img {
+    width: 544px;
+    height: 314px;
+  }
 }
 @media screen and (min-width: 1140px) {
-  .section {
-    padding-top: 82px;
-    padding-bottom: 82px;
-  }
   .covers-container {
     width: 1440px;
     max-width: 1440px;

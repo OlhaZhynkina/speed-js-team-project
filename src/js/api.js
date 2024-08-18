@@ -13,7 +13,7 @@ export async function getReviews() {
 
 export async function submitWorkTogetherForm(data) {
   try {
-    const response = await axios.post('/work-together', data);
+    const response = await axios.post('/requests', data);
     return response;
   } catch (err) {
     throw err;
