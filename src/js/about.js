@@ -2,7 +2,13 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
-const swiperAboute = new Swiper('.swiper-container', {
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+
+new Accordion('.about-accordion-container', { showMultiple: true });
+
+const swiperAbout = new Swiper('.swiper-container', {
+  loop: true,
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
     nextEl: '.swiper-button-next',
@@ -17,5 +23,4 @@ const swiperAboute = new Swiper('.swiper-container', {
   mousewheel: {
     sensitivity: 1,
   },
-  loop: true,
 });
