@@ -19,6 +19,8 @@ const swiperProjects = new Swiper('.swiper', {
   },
 });
 
+const projectsSection = document.querySelector('.section.projects');
+
 const buttonPrev = document.querySelector(
   '.position-container .swiper-button-prev'
 );
@@ -54,11 +56,11 @@ checkStatus();
 buttonNext.addEventListener('click', checkStatus);
 buttonPrev.addEventListener('click', checkStatus);
 
-document.addEventListener('touchstart', checkStatus);
-document.addEventListener('touchend', checkStatus);
-document.addEventListener('touchmove', checkStatus);
+projectsSection.addEventListener('touchstart', checkStatus);
+projectsSection.addEventListener('touchend', checkStatus);
+projectsSection.addEventListener('touchmove', checkStatus);
 
-document.addEventListener('keyup', event => {
+projectsSection.addEventListener('keyup', event => {
   if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
     checkStatus();
   }
