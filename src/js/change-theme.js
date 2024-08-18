@@ -11,34 +11,34 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   const gradients = {
-    '#ed3b44': {
-      gradient:
-        'linear-gradient(90.11deg, #1c1d20 49.69%, #69292d 67.71%, #ed3b44 99.91%)',
-      image: '/src/img/colored-images/colored-1-x1.png',
-    },
     '#c6e327': {
       gradient:
-        'linear-gradient(90.11deg, #1c1d20 49.69%, #596808 67.71%, rgba(198, 227, 39, 0.76) 99.91%)',
-      image: '/src/img/colored-images/colored-2-x1.png',
+        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(89, 104, 8), rgb(198, 227, 39))',
+      image: '/src/img/colored-images/colored-1-x1.png',
     },
     '#0041e8': {
       gradient:
-        'linear-gradient(90.11deg, #1c1d20 49.69%, #001958 67.71%, #0041e8 99.91%)',
+        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(0, 25, 88), rgb(0, 65, 232))',
+      image: '/src/img/colored-images/colored-2-x1.png',
+    },
+    '#ed3b44': {
+      gradient:
+        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(105, 41, 45), rgb(237, 59, 68))',
       image: '/src/img/colored-images/colored-3-x1.png',
     },
-    '#e6533c': {
+    '#b662dd': {
       gradient:
-        'linear-gradient(90.11deg, #1c1d20 49.69%, #9f3626 67.71%, #e6533c 99.91%)',
+        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(100, 37, 129), rgb(182, 98, 221))',
       image: '/src/img/colored-images/colored-4-x1.png',
     },
-    '#2b4441': {
+    '#237f76': {
       gradient:
-        'linear-gradient(90.11deg, #1c1d20 49.69%, #1e3633 67.71%, #2b4441 99.91%)',
+        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(16, 78, 72), rgb(35, 127, 118))',
       image: '/src/img/colored-images/colored-5-x1.png',
     },
     '#ff7f08': {
       gradient:
-        'linear-gradient(90.11deg, #1c1d20 49.69%, #ac5300 67.71%, #ff7f08 99.91%)',
+        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(172, 83, 0), rgb(255, 127, 8))',
       image: '/src/img/colored-images/colored-6-x1.png',
     },
   };
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     svgElements.forEach(svg => {
-      svg.style.fill = color;
+      svg.style.stroke = color;
     });
 
     coloredBackgroundImages.forEach(bgImg => {
