@@ -48,7 +48,7 @@ function reviewWapper(arrayLength) {
       },
       reachEnd: function () {
         // Вимкнути кнопку "next" при досягненні кінця
-        document.querySelector('.review-hidden-next').classList.add('disabled');
+        document.querySelector('.review-btn-next').classList.add('disabled');
       },
       reachBeginning: function () {
         // Вимкнути кнопку "prev" при досягненні початку
