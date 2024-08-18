@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { submitWorkTogetherForm } from './api';
 
 const form = document.getElementById('contact-form');
 const emailInput = document.getElementById('email-input');
@@ -26,7 +26,7 @@ form.addEventListener('submit', async function (event) {
   const formData = new FormData(form);
   const emailValue = formData.get('email').trim();
 
-  if (!emailValue.match(/^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+  if (!emailInput.checkValidity()) {
     emailInput.classList.add('invalid');
     emailError.style.display = 'block';
     return;
@@ -36,24 +36,18 @@ form.addEventListener('submit', async function (event) {
   }
 
   try {
-    const response = await axios('https://your-server-endpoint.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email: emailValue,
-        comments: formData.get('comments').trim(),
-      }),
-    });
+    const data = {
+      email: emailValue,
+      comments: formData.get('comments').trim(),
+    };
 
-    const result = await response.json();
+    const response = await submitWorkTogetherForm(data);
 
-    if (response.ok) {
+    if (response.status === 201) {
       openModal('Your request has been successfully submitted!');
       form.reset();
     } else {
-      openModal(`Error: ${result.message}`);
+      openModal(`Error: ${response.data.message}`);
     }
   } catch (error) {
     openModal('An unexpected error occurred. Please try again.');
