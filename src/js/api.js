@@ -10,3 +10,12 @@ export async function getReviews() {
     console.log(err);
   }
 }
+
+export async function submitWorkTogetherForm(data) {
+  try {
+    const response = await axios.post('/work-together', data);
+    return response;
+  } catch (err) {
+    throw err;
+  }
+}

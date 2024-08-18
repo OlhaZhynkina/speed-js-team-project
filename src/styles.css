@@ -55,7 +55,6 @@ p {
   line-height: 24px;
   color: var(--text-title);
   text-transform: uppercase;
-  transition: all 0.3s ease;
 }
 
 .container {
@@ -69,7 +68,7 @@ p {
   .container {
     max-width: 768px;
     width: 100%;
-    padding: 0 16px;
+    padding: 0 32px;
   }
 
   .section {
