@@ -2,6 +2,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
     position: absolute;
+    z-index: 1000;
 }
 .header-container {
     display: flex;
@@ -100,8 +101,24 @@ cursor: pointer;
     background-size: cover;
     background-blend-mode: overlay; */
     /* background: url('../img/background/glass-effect.png') no-repeat center center/cover; */
-    background:
-    linear-gradient(90deg, var(--lime-hover) 0%, #596808 32%, var(--bg-main) 50%); 
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(127, 127, 127, 0.2) 0px,
+        /* 0% */ rgba(255, 255, 255, 0.07) 1.75%,
+        /* 43% */ rgba(0, 0, 0, 0.15) 2.33%,
+        /* 57% */ rgba(127, 127, 127, 0.2) 8.33% /* 100% */
+      ),
+      linear-gradient(
+        90deg,
+        var(--lime-hover) 0%,
+        #596808 32%,
+        var(--bg-main) 50%
+      );
+  
+    backdrop-filter: blur(10px);
+  
+    background-blend-mode: overlay;
+    transform: translateX(-1.66%);
     /* backdrop-filter: blur(10px); */
     /* background-size: 200% 100%;  */
     display: flex;
