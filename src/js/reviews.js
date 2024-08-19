@@ -41,7 +41,7 @@ setTimeout(() => {
 }, 100);
 
 function reviewWapper(arrayLength) {
-  new Swiper('.swiper', {
+  new Swiper('.swiper-reviews', {
     modules: [Navigation, Keyboard],
     slidesPerView: 1,
     spaceBetween: 50,
@@ -85,7 +85,7 @@ function reviewWapper(arrayLength) {
       },
       reachEnd: function () {
         // Вимкнути кнопку "next" при досягненні кінця
-        document.querySelector('.review-hidden-next').classList.add('disabled');
+        document.querySelector('.review-btn-next').classList.add('disabled');
       },
       reachBeginning: function () {
         // Вимкнути кнопку "prev" при досягненні початку
