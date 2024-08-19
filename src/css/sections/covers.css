@@ -99,14 +99,26 @@
   height: 162px;
 }
 .marquee__inner.animate {
-  animation: marqueeMovement 15s linear infinite alternate;
+  animation: marqueeMovement 15s linear infinite;
 }
 @keyframes marqueeMovement {
   from {
     transform: translateX(0) rotate(16deg);
   }
   to {
+    transform: translateX(-100%) rotate(16deg);
+  }
+}
+.marquee__inner.reverse {
+  animation: marqueeMovementReverse 15s linear infinite;
+}
+
+@keyframes marqueeMovementReverse {
+  0% {
     transform: translateX(-160%) rotate(16deg);
+  }
+  100% {
+    transform: translateX(0) rotate(16deg);
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -157,17 +169,21 @@
     width: 300px;
     height: 300px;
   }
+  .marquee__inner {
+  }
   .column-zero {
-    top: -50vh;
+    top: -30vh;
+    left: 90vh;
   }
   .column-first {
-    top: -14vh;
+    top: -20vh;
+    left: 0vh;
   }
   .column-second {
-    top: 23vh;
+    top: 20vh;
   }
   .column-third {
-    bottom: -4vh;
+    bottom: -2vh;
   }
   .covers-container {
     width: 1440px;
