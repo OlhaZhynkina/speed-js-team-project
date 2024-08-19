@@ -4,7 +4,7 @@ import { Navigation, Keyboard } from 'swiper/modules';
 
 console.log('message');
 
-const swiperProjects = new Swiper('.swiper', {
+const swiperProjects = new Swiper('.swiper-projects', {
   modules: [Navigation, Keyboard],
   slidesPerView: 1,
   spaceBetween: 100,
