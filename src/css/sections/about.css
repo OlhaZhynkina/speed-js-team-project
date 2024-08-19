@@ -148,6 +148,20 @@
   border-radius: 50%;
   width: 130px;
   height: 130px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.swiper-skills.active {
+  display: list-item;
+  opacity: 1;
+  background-color: var(--lime);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .about-button-swip {
