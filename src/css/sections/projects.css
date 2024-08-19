@@ -142,6 +142,10 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
+.swiper-container {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 768px) {
   .item-top-background {
     padding: 64px;
