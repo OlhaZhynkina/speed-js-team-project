@@ -11,10 +11,10 @@ const swiperAbout = new Swiper('.swiper-container', {
   loop: true,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
   },
   simulateTouch: true,
   keyboard: {
@@ -26,4 +26,44 @@ const swiperAbout = new Swiper('.swiper-container', {
     sensitivity: 1,
   },
   modules: [Navigation, Keyboard, Mousewheel],
+
+  // slidesPerView: 1,
+  // spaceBetween: 1,
+
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 1,
+  //   },
+  //   768: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 1,
+  //   },
+  //   1440: {
+  //     slidesPerView: 4,
+  //     spaceBetween: 1,
+  //   },
+  // },
+});
+
+const skillsList = document.querySelectorAll('.swiper-skills');
+let currentIndex = 0;
+
+function updateActiveClass(index) {
+  skillsList.forEach((skill, i) => {
+    skill.classList.remove('active');
+    if (i === index) {
+      skill.classList.add('active');
+    }
+  });
+}
+
+updateActiveClass(currentIndex);
+
+document.querySelector('.swiper-button-next').addEventListener('click', () => {
+  skillsList[currentIndex].classList.remove('active');
+
+  currentIndex = (currentIndex + 1) % skillsList.length;
+
+  skillsList[currentIndex].classList.add('active');
 });

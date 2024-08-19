@@ -2,16 +2,16 @@
   <div class="container about-container-section">
     <div class="container-about">
       <h2 class="visually-hidden-about">ABOUT</h2>
-      <ul class="about-list">
-        <li class="about-list-text">
+      <div class="about-list">
+        <div class="about-list-text">
           <p class="about-text">
             I work with people all over the world to create impressive and
             <span class="colortext color-text">functional</span>
             <span class="colortext-two">websites</span> that reflect each
             client's unique personality.
           </p>
-        </li>
-        <li class="ideas-item">
+        </div>
+        <div class="ideas-item">
           <picture
             ><source
               srcset="./img/aboute/jef@1x.jpg 1x, ./img/aboute/jef@2x.jpg 2x"
@@ -37,8 +37,8 @@
               height="700"
             />
           </picture>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
     <div class="about-accordion-container about">
@@ -150,21 +150,24 @@
       </div>
     </div>
 
-    <div class="swiper-container">
-  <div class="swiper-wrapper swiper-skills-all">
-    <div class="swiper-slide swiper-slide-p"><ul class="swiper-list"><li class="swiper-skills">HTML/CSS</li></ul></div>
-    <div class="swiper-slide swiper-slide-p"><ul class="swiper-list"><li class="swiper-skills">JavaScript</li></ul></div>
-    <div class="swiper-slide swiper-slide-p"><ul class="swiper-list"><li class="swiper-skills">React</li></ul></div>
-    <div class="swiper-slide swiper-slide-p"><ul class="swiper-list"><li class="swiper-skills">Node. js</li></ul></div>
-    <div class="swiper-slide swiper-slide-p"><ul class="swiper-list"><li class="swiper-skills">React Native</li></ul></div>
-    <div class="swiper-slide swiper-slide-p"><ul class="swiper-list"><li class="swiper-skills">Soft skills</li></ul></div>
-  </div>
-</div>
-
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+    <div class="swiper swiper-container">
+      <ul class="swiper-wrapper swiper-list">
+            <li class="swiper-slide swiper-skills">HTML/CSS</li>
+            <li class="swiper-slide swiper-skills">JavaScript</li>
+            <li class="swiper-slide swiper-skills">React</li>
+            <li class="swiper-slide swiper-skills">Node.js</li>
+            <li class="swiper-slide swiper-skills">React Native</li>
+            <li class="swiper-slide swiper-skills">Soft skills</li>
+          </ul>
+        </div>
+  
+      <div class="swiper-pagination about-pagination">
+       <button class="swiper-button-next about-button-swip">
+          <svg class="swiper-button-svg about-svg-swip" width="24" height="24">
+            <use href="./img/icons.svg#icon-arrow-narrow-right-new"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>

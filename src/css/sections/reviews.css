@@ -7,6 +7,8 @@
   margin-bottom: 32px;
 }
 .item-review {
+  display: flex;
+  flex-direction: column !important;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
@@ -81,6 +83,11 @@
 
 .review-btn-container .review-btn:disabled .review-btn-svg {
   stroke: var(--bg-cards);
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {

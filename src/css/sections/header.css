@@ -74,11 +74,6 @@ cursor: pointer;
     display: none;
 }
 
-.icon {
-}
-.header-menu-icon {
-}
-
 /*=====Modal window======*/
 
 .header-modal-window {
@@ -94,13 +89,8 @@ cursor: pointer;
     align-items: center; 
     text-align: center;
     z-index: 1000; 
-   
 }
 .header-modal-container {
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: overlay; */
-    /* background: url('../img/background/glass-effect.png') no-repeat center center/cover; */
     background: repeating-linear-gradient(
         90deg,
         rgba(127, 127, 127, 0.2) 0px,
@@ -131,26 +121,6 @@ cursor: pointer;
     position: relative;
 }
 
-
-/* .header-modal-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    opacity: 0.9; 
-    z-index: 1; 
-    pointer-events: none; 
-    background-blend-mode: overlay;
-}
-
-.header-modal-container * {
-    position: relative;
-    z-index: 2;
-} */
-
 .header-modal-close {
     display: flex;
     justify-content: center;
@@ -176,16 +146,10 @@ cursor: pointer;
     fill: var(--text);
 }
 
-.header-modal-nav {
-}
-
 .header-modal-ul {
     display: flex;
     flex-direction: column;
     gap: 12px;
-}
-
-.header-modal-li {
 }
 
 .header-modal-anchor {

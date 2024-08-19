@@ -17,6 +17,11 @@ const swiperProjects = new Swiper('.swiper-projects', {
     onlyInViewport: true,
     pageUpDown: true,
   },
+  on: {
+    slideChange: function () {
+      checkStatus();
+    },
+  },
 });
 
 const projectsSection = document.querySelector('.section.projects');
