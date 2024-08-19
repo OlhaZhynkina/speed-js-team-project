@@ -122,24 +122,18 @@
   transition: all 0.3s ease;
 }
 
-.swiper {
-  width: 100%;
-}
-
-.swiper-container {
+.swiper.swiper-container {
   width: 100%;
   margin-top: 32px;
   padding: 0;
 }
 
 .swiper-list {
-  list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
 }
 
-.swiper-skills {
+.swiper-slide.swiper-skills {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
@@ -154,9 +148,29 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+/* .swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-slide .swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+} */
+
 .swiper-skills.active {
-  display: list-item;
-  opacity: 1;
   background-color: var(--lime);
 }
 
@@ -167,17 +181,13 @@
   cursor: pointer;
 }
 
-.swiper-skills.active {
-  display: list-item;
-}
-
 .about-button-swip {
   background: transparent;
   border: none;
 }
 
 .about-svg-swip {
-  stroke: var(--bg-arrows) !important;
+  stroke: var(--bg-arrows);
 }
 
 .swiper-button-prev,

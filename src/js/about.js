@@ -26,32 +26,44 @@ const swiperAbout = new Swiper('.swiper-container', {
     sensitivity: 1,
   },
   modules: [Navigation, Keyboard, Mousewheel],
+
+  // slidesPerView: 1,
+  // spaceBetween: 1,
+
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 1,
+  //   },
+  //   768: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 1,
+  //   },
+  //   1440: {
+  //     slidesPerView: 4,
+  //     spaceBetween: 1,
+  //   },
+  // },
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const skills = document.querySelectorAll('.swiper-skills');
-  const nextButton = document.querySelector('.swiper-button-next');
-  const prevButton = document.querySelector('.swiper-button-prev');
-  let currentIndex = 0;
+const skillsList = document.querySelectorAll('.swiper-skills');
+let currentIndex = 0;
 
-  skills[currentIndex].classList.add('active');
+function updateActiveClass(index) {
+  skillsList.forEach((skill, i) => {
+    skill.classList.remove('active');
+    if (i === index) {
+      skill.classList.add('active');
+    }
+  });
+}
 
-  function showNext() {
-    skills[currentIndex].classList.remove('active');
+updateActiveClass(currentIndex);
 
-    currentIndex = (currentIndex + 1) % skills.length;
+document.querySelector('.swiper-button-next').addEventListener('click', () => {
+  skillsList[currentIndex].classList.remove('active');
 
-    skills[currentIndex].classList.add('active');
-  }
+  currentIndex = (currentIndex + 1) % skillsList.length;
 
-  function showPrev() {
-    skills[currentIndex].classList.remove('active');
-
-    currentIndex = (currentIndex - 1 + skills.length) % skills.length;
-
-    skills[currentIndex].classList.add('active');
-  }
-
-  nextButton.addEventListener('click', showNext);
-  prevButton.addEventListener('click', showPrev);
+  skillsList[currentIndex].classList.add('active');
 });
