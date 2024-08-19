@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="/speed-js-team-project/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/speed-js-team-project/assets/vendor-CPXm-ZWR.js">
     <link rel="stylesheet" crossorigin href="/speed-js-team-project/assets/vendor-Sdrirsik.css">
-    <link rel="stylesheet" crossorigin href="/speed-js-team-project/assets/index-8UJG1gbv.css">
+    <link rel="stylesheet" crossorigin href="/speed-js-team-project/assets/index-BjVdWXOZ.css">
   </head>
   <body>
     <header class="header">
@@ -431,7 +431,9 @@
   <div class="container">
     <h2 class="section-title">Projects</h2>
 
-    <div class="swiper-projects">
+    <!-- remove swiper from beelow -->
+    <div class="swiper-projects swiper-container">
+      <!-- add swiper-container and temporary remove scroll-->
       <ul class="projects-list swiper-wrapper">
         <li class="projects-item swiper-slide">
           <div class="item-flex-container">
@@ -1051,7 +1053,7 @@
         </div>
     </div>
 </section>
-    <section class="section" id="reviews">
+    <section class="section review-js" id="reviews">
   <div class="container">
     <h3 class="section-title review-title">REVIEWS</h3>
     <div class="swiper">
@@ -1065,22 +1067,22 @@
           >
             <use href="/speed-js-team-project/assets/icons-BvCStRNh.svg#icon-arrow-narrow-right-new"></use>
           </svg>
-          <!-- <svg
-            class="review-btn-svg review-hidden-prev review-flip-arrow"
-            width="32"
-            height="32"
+          <svg
+            class="review-btn-svg hiddenPrevRev review-flip-arrow"
+            width="24"
+            height="24"
           >
-            <use href="./img/icons.svg#arrow-narrow-right"></use>
-          </svg> -->
+            <use href="/speed-js-team-project/assets/icons-BvCStRNh.svg#arrow-narrow-right"></use>
+          </svg>
         </button>
 
         <button class="review-btn-next swiper-button-next review-btn">
           <svg class="review-btn-svg review-hidden-next" width="32" height="32">
             <use href="/speed-js-team-project/assets/icons-BvCStRNh.svg#icon-arrow-narrow-right-new"></use>
           </svg>
-          <!-- <svg class="review-btn-svg review-hidden-next" width="32" height="32">
-            <use href="./img/icons.svg#arrow-narrow-right"></use>
-          </svg> -->
+          <svg class="review-btn-svg hiddenNextRev" width="24" height="24">
+            <use href="/speed-js-team-project/assets/icons-BvCStRNh.svg#arrow-narrow-right"></use>
+          </svg>
         </button>
       </div>
     </div>
