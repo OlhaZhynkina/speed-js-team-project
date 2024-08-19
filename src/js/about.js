@@ -9,12 +9,29 @@ new Accordion('.about-accordion-container', { showMultiple: true });
 
 const swiperAbout = new Swiper('.swiper-container', {
   loop: true,
-
   pagination: {
-    el: 'swiper-pagination',
+    el: '.swiper-pagination',
   },
-
-  modules: [Navigation, Keyboard, Mousewheel],
+  modules: [Navigation],
+  slidesPerView: 2,
+  spaceBetween: 1,
+  breakpoints: {
+    // when window width is >= 320
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 1,
+    },
+    // when window width is >= 768
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 1,
+    },
+    // when window width is >= 1440
+    1440: {
+      slidesPerView: 6,
+      spaceBetween: 1,
+    },
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -28,4 +45,7 @@ const swiperAbout = new Swiper('.swiper-container', {
   mousewheel: {
     sensitivity: 1,
   },
+  modules: [Navigation, Keyboard, Mousewheel],
 });
+
+$('.swiper-slide-p').slick({});

@@ -126,17 +126,13 @@
   width: 100%;
   height: 100%;
   margin-top: 32px;
-}
-
-.swiper-wrapper {
-  margin: 0 auto;
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0;
+}
+
+.swiper-wrapper.swiper-skills-all {
+}
+
+.swiper-slide.swiper-slide-p {
 }
 
 .swiper-list {
