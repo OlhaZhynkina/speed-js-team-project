@@ -9,7 +9,9 @@ new Accordion('.about-accordion-container', { showMultiple: true });
 
 const swiperAbout = new Swiper('.swiper-container', {
   loop: true,
-  modules: [Navigation, Keyboard, Mousewheel],
+  pagination: {
+    el: '.swiper-pagination',
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -23,4 +25,5 @@ const swiperAbout = new Swiper('.swiper-container', {
   mousewheel: {
     sensitivity: 1,
   },
+  modules: [Navigation, Keyboard, Mousewheel],
 });
