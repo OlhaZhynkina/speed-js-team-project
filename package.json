@@ -17,7 +17,7 @@
   "dependencies": {
     "accordion": "^3.0.2",
     "accordion-js": "^3.3.4",
-    "axios": "^1.7.3",
+    "axios": "^1.7.4",
     "fast-glob": "^3.3.2",
     "inflight": "^1.0.6",
     "izitoast": "^1.4.0",

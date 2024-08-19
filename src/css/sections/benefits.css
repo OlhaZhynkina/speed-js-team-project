@@ -84,14 +84,14 @@
 
 .scroll-up-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 999;
-  width: 68px;
-  height: 68px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: transparent;
   color: var(--text);
