@@ -7,7 +7,7 @@ console.log('message');
 const swiperProjects = new Swiper('.swiper-projects', {
   modules: [Navigation, Keyboard],
   slidesPerView: 1,
-  spaceBetween: 100,
+  spaceBetween: 10,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -17,9 +17,16 @@ const swiperProjects = new Swiper('.swiper-projects', {
     onlyInViewport: true,
     pageUpDown: true,
   },
+  on: {
+    slideChange: function () {
+      checkStatus();
+    },
+  },
 });
 
-const projectsSection = document.querySelector('.section.projects');
+const projectsSection = document.querySelector('.projects');
+const projectsItem = document.querySelectorAll('.projects-item');
+console.log(projectsItem);
 
 const buttonPrev = document.querySelector(
   '.position-container .swiper-button-prev'
@@ -33,6 +40,14 @@ const hiddenPrev = document.querySelector('.hiddenPrev');
 const hiddenNext = document.querySelector('.hiddenNext');
 
 function checkStatus() {
+  projectsItem.forEach(item => {
+    if (!item.classList.contains('swiper-slide-active')) {
+      item.classList.add('visually-hidden');
+    } else {
+      item.classList.remove('visually-hidden');
+    }
+  });
+
   hiddenNext.style.display = buttonNext.hasAttribute('disabled')
     ? 'block'
     : 'none';
@@ -55,13 +70,3 @@ checkStatus();
 
 buttonNext.addEventListener('click', checkStatus);
 buttonPrev.addEventListener('click', checkStatus);
-
-projectsSection.addEventListener('touchstart', checkStatus);
-projectsSection.addEventListener('touchend', checkStatus);
-projectsSection.addEventListener('touchmove', checkStatus);
-
-projectsSection.addEventListener('keyup', event => {
-  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-    checkStatus();
-  }
-});
