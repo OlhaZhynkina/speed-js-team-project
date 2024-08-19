@@ -9,6 +9,11 @@ new Accordion('.about-accordion-container', { showMultiple: true });
 
 const swiperAbout = new Swiper('.swiper-container', {
   loop: true,
+
+  pagination: {
+    el: 'swiper-pagination',
+  },
+
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
     nextEl: '.swiper-button-next',
