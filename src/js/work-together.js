@@ -1,108 +1,90 @@
-import { submitWorkTogetherForm } from './api';
+import { sendWorkTogetherRequest } from './api';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
-const form = document.getElementById('contact-form');
-const emailInput = document.getElementById('email-input');
-const emailError = document.getElementById('email-error');
-const emailSuccess = document.getElementById('email-success');
-const modalOverlay = document.querySelector('.wt-modal-overlay');
-const modalMessage = document.querySelector('.wt-modal-info');
-const modalTitle = document.querySelector('.wt-modal-title');
+const emailInput = document.getElementById('email');
+const commentsInput = document.querySelector('.comments');
+const form = document.querySelector('.contact-form');
+const message = document.getElementById('email-success');
+const btn = document.querySelector('.wt-btn');
+
+// modal
+const overlay = document.querySelector('.wt-modal-overlay');
+const modal = document.querySelector('.wt-modal-container');
 const closeModalBtn = document.querySelector('.wt-modal-close-btn');
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function openModal(message) {
-  modalMessage.textContent = message;
-  modalTitle.textContent = 'Thank you for your interest in cooperation!';
-  modalOverlay.style.opacity = '1';
-  modalOverlay.style.pointerEvents = 'auto';
-  modalOverlay.style.visibility = 'visible';
-}
-
-function openErrModal(message) {
-  modalMessage.textContent = message;
-  modalTitle.textContent = 'Something went wrong';
-  modalOverlay.style.opacity = '1';
-  modalOverlay.style.pointerEvents = 'auto';
-  modalOverlay.style.visibility = 'visible';
-}
-
-function closeModal() {
-  modalOverlay.style.opacity = '0';
-  modalOverlay.style.pointerEvents = 'none';
-  modalOverlay.style.visibility = 'hidden';
-}
-
-function validateEmail() {
-  const emailValue = emailInput.value.trim();
-  if (emailValue === '') {
-    emailInput.classList.remove('invalid');
-    emailInput.classList.remove('valid');
-    emailError.style.display = 'none';
-    emailSuccess.style.display = 'none';
-  } else if (!emailValue.match(emailRegex)) {
-    emailInput.classList.add('invalid');
-    emailInput.classList.remove('valid');
-    emailError.style.display = 'block';
-    emailSuccess.style.display = 'none';
-  } else {
-    emailInput.classList.remove('invalid');
-    emailInput.classList.add('valid');
-    emailError.style.display = 'none';
-    emailSuccess.style.display = 'block';
-  }
-}
+const modalTitle = document.querySelector('.wt-modal-title');
+const modalText = document.querySelector('.wt-modal-info');
 
 emailInput.addEventListener('blur', validateEmail);
+commentsInput.addEventListener('input', validateEmail);
 
-form.addEventListener('submit', async function (event) {
+form.addEventListener('submit', async event => {
   event.preventDefault();
 
-  const formData = new FormData(form);
-  const emailValue = formData.get('email').trim();
-
-  if (!emailValue.match(emailRegex)) {
-    emailInput.classList.add('invalid');
-    emailError.style.display = 'block';
-    emailSuccess.style.display = 'none';
-    return;
-  } else {
-    emailInput.classList.remove('invalid');
-    emailError.style.display = 'none';
-  }
+  modal.classList.remove('is-hidden');
+  overlay.classList.remove('is-hidden');
 
   try {
-    const data = {
-      email: emailValue,
-      comment: formData.get('comments').trim(),
-    };
-
-    const response = await submitWorkTogetherForm(data);
-
-    if (response.status === 201) {
-      openModal(
-        'The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.'
-      );
-      form.reset();
-      emailInput.classList.remove('valid', 'invalid');
-      emailSuccess.style.display = 'none';
-    } else {
-      openErrModal(`Error: ${response.data.message}`);
-    }
+    const response = await sendWorkTogetherRequest(
+      emailInput.value.trim(),
+      commentsInput.value.trim()
+    );
+    modalTitle.textContent = response.title;
+    modalText.textContent = response.message;
   } catch (error) {
-    openErrModal('An unexpected error occurred. Please try again.');
+    iziToast.show({
+      message:
+        error.response?.data?.message || error.message || 'An error occurred',
+      backgroundColor: '#ef4040',
+      position: 'topRight',
+      messageSize: 16,
+      messageColor: '#fff',
+      messageLineHeight: '150%',
+      timeout: 4000,
+    });
+  } finally {
+    form.reset();
+    emailInput.classList.remove('error');
+    emailInput.classList.remove('success');
+    message.textContent = '';
+    btn.disabled = true;
   }
 });
+
+function validateEmail() {
+  const emailIsValid =
+    emailInput.checkValidity() && emailInput.value.trim() !== '';
+  const commentIsFilled = commentsInput.value.trim() !== '';
+
+  if (emailIsValid) {
+    emailInput.classList.remove('error');
+    emailInput.classList.add('success');
+    message.textContent = 'Success!';
+    message.style.color = '#3cbc81';
+  } else {
+    emailInput.classList.remove('success');
+    emailInput.classList.add('error');
+    message.textContent = 'Invalid email, try again';
+    message.style.color = '#e74a3b';
+  }
+
+  btn.disabled = !(emailIsValid && commentIsFilled);
+}
+
+btn.addEventListener('click', () => {
+  modal.classList.remove('.is-hidden');
+});
+
+const closeModal = () => {
+  modal.classList.add('is-hidden');
+  overlay.classList.add('is-hidden');
+};
 
 closeModalBtn.addEventListener('click', closeModal);
 
-modalOverlay.addEventListener('click', function (event) {
-  if (event.target === modalOverlay) {
-    closeModal();
-  }
-});
+overlay.addEventListener('click', closeModal);
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', event => {
   if (event.key === 'Escape') {
     closeModal();
   }
