@@ -1,5 +1,6 @@
 .covers-section {
   position: relative;
+  min-height: 508px;
   overflow: hidden;
 }
 .title-hidden {
@@ -13,8 +14,9 @@
 }
 
 .circle {
-  width: 300px;
-  height: 300px;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
   background-color: var(--lime);
   opacity: 0.45;
   border-radius: 50%;
@@ -33,7 +35,7 @@
 }
 
 .circle-3 {
-  top: -80px;
+  top: -10px;
   left: 650px;
 }
 .circle-4 {
@@ -46,27 +48,30 @@
   width: 100%;
   margin: 0 auto;
 }
-.title-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
 
 .section {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
-.marquee {
-  overflow: hidden;
+.column-zero {
+  position: absolute;
+  top: -15vh;
 }
-/* тут работаю */
+.column-first {
+  position: absolute;
+}
+.column-second {
+  position: absolute;
+  top: 21vh;
+}
+.column-third {
+  position: absolute;
+  bottom: -11vh;
+}
+
 .marquee__inner {
-  /* position: absolute; */
-  /* height: 200px; */
-  /* overflow: hidden; */
   display: flex;
-  /* column-gap: 30px; */
+
   transform: rotate(16deg);
   width: 282px;
   height: 162px;
@@ -95,7 +100,7 @@
   height: 162px;
 }
 .marquee__inner.animate {
-  animation: marqueeMovement 11s linear infinite alternate;
+  animation: marqueeMovement 15s linear infinite alternate;
 }
 @keyframes marqueeMovement {
   from {
@@ -110,6 +115,10 @@
   .covers-container {
     max-width: 768px;
   }
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
   .marquee__inner {
     width: 544px;
     height: 314px;
@@ -121,6 +130,11 @@
   }
 }
 @media screen and (min-width: 1140px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
   .covers-container {
     width: 1440px;
     max-width: 1440px;
