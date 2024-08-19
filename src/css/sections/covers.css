@@ -99,7 +99,7 @@
   height: 162px;
 }
 .marquee__inner.animate {
-  animation: marqueeMovement 15s linear infinite;
+  animation: marqueeMovement 15s linear infinite alternate;
 }
 @keyframes marqueeMovement {
   from {
