@@ -76,8 +76,8 @@
 }
 
 .benefits-btn:hover {
-  border-color: var(--lime-hover);
-  color: var(--lime-hover);
+  border-color: var(--text);
+  color: var(--text);
 }
 
 /*! ===============SCROLL-UP================= !*/
@@ -101,8 +101,8 @@
 }
 
 .scroll-up-btn:hover {
-  border-color: var(--lime-hover);
-  color: var(--lime-hover);
+  border-color: var(--text);
+  color: var(--text);
 }
 
 .scroll-up-btn-hidden {
