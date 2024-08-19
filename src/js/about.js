@@ -11,6 +11,7 @@ const swiperAbout = new Swiper('.swiper-container', {
   loop: true,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -30,22 +31,27 @@ const swiperAbout = new Swiper('.swiper-container', {
 document.addEventListener('DOMContentLoaded', function () {
   const skills = document.querySelectorAll('.swiper-skills');
   const nextButton = document.querySelector('.swiper-button-next');
+  const prevButton = document.querySelector('.swiper-button-prev');
   let currentIndex = 0;
 
-  // Show the first item initially
   skills[currentIndex].classList.add('active');
 
   function showNext() {
-    // Remove 'active' class from current item
     skills[currentIndex].classList.remove('active');
 
-    // Move to the next item
     currentIndex = (currentIndex + 1) % skills.length;
 
-    // Add 'active' class to the next item
     skills[currentIndex].classList.add('active');
   }
 
-  // Set up button event listener
+  function showPrev() {
+    skills[currentIndex].classList.remove('active');
+
+    currentIndex = (currentIndex - 1 + skills.length) % skills.length;
+
+    skills[currentIndex].classList.add('active');
+  }
+
   nextButton.addEventListener('click', showNext);
+  prevButton.addEventListener('click', showPrev);
 });
