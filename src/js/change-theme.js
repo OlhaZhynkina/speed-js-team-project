@@ -9,45 +9,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const coloredBackgroundImages = document.querySelectorAll(
     '.colored-background-image'
   );
+  const hoveredCircles = document.querySelectorAll('.h-circle');
 
   const gradients = {
     '#c6e327': {
-      gradient:
-        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(89, 104, 8), rgb(198, 227, 39))',
-      image: '/src/img/colored-images/colored-1-x1.png',
+      className: 'cool-color-lime',
     },
     '#0041e8': {
-      gradient:
-        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(0, 25, 88), rgb(0, 65, 232))',
-      image: '/src/img/colored-images/colored-2-x1.png',
+      className: 'cool-color-blue',
     },
     '#ed3b44': {
-      gradient:
-        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(105, 41, 45), rgb(237, 59, 68))',
-      image: '/src/img/colored-images/colored-3-x1.png',
+      className: 'cool-color-red',
     },
     '#b662dd': {
-      gradient:
-        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(100, 37, 129), rgb(182, 98, 221))',
-      image: '/src/img/colored-images/colored-4-x1.png',
+      className: 'cool-color-purple',
     },
     '#237f76': {
-      gradient:
-        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(16, 78, 72), rgb(35, 127, 118))',
-      image: '/src/img/colored-images/colored-5-x1.png',
+      className: 'cool-color-teal',
     },
     '#ff7f08': {
-      gradient:
-        'linear-gradient(270deg, rgb(28, 29, 32) 50%, rgb(172, 83, 0), rgb(255, 127, 8))',
-      image: '/src/img/colored-images/colored-6-x1.png',
+      className: 'cool-color-orange',
     },
   };
 
-  const applyColor = color => {
-    const { gradient, image } = gradients[color];
+  const colorClasses = {
+    '#ed3b44': 'red-clr',
+    '#0041e8': 'blue-clr',
+    '#c6e327': 'yellow-clr',
+    '#b662dd': 'purple-clr',
+    '#237f76': 'green-clr',
+    '#ff7f08': 'orange-clr',
+  };
 
-    colorSquares.forEach(grdnt => {
-      grdnt.style.background = gradient;
+  const applyColor = color => {
+    const colorClassName = colorClasses[color];
+    const gradientClassName = gradients[color]?.className;
+
+    colorSquares.forEach(square => {
+      square.classList.remove(...Object.values(colorClasses));
+      if (colorClassName) {
+        square.classList.add(colorClassName);
+      }
     });
 
     colorCircles.forEach(clr => {
@@ -65,6 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
     coloredBackgroundImages.forEach(bgImg => {
       bgImg.style.backgroundImage = `url(${image})`;
     });
+
+    hoveredCircles.forEach(circle => {
+      circle.classList.remove(
+        ...Object.values(gradients).map(g => g.className)
+      );
+      if (gradientClassName) {
+        circle.classList.add(gradientClassName);
+      }
+    });
   };
 
   const savedColor = localStorage.getItem('selectedColor');
@@ -75,9 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
   colorButtonElements.forEach(button => {
     button.addEventListener('click', () => {
       const color = button.getAttribute('data-color').toLowerCase();
-
       localStorage.setItem('selectedColor', color);
-
       applyColor(color);
     });
   });
