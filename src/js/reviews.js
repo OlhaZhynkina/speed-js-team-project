@@ -1,17 +1,50 @@
 import { getReviews } from './api';
 
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+const reviewSec = document.querySelector('.review-js');
+
+const buttonPrevRev = document.querySelector('.review-btn-prev');
+const buttonNextRev = document.querySelector('.review-btn-next');
+
+const hiddenPrevRev = document.querySelector('.hiddenPrevRev');
+const hiddenNextRev = document.querySelector('.hiddenNextRev');
+
+function checkStatusRev() {
+  hiddenNextRev.style.display = buttonNextRev.hasAttribute('disabled')
+    ? 'block'
+    : 'none';
+  buttonNextRev.firstElementChild.style.display = buttonNextRev.hasAttribute(
+    'disabled'
+  )
+    ? 'none'
+    : 'block';
+
+  hiddenPrevRev.style.display = buttonPrevRev.hasAttribute('disabled')
+    ? 'block'
+    : 'none';
+  buttonPrevRev.firstElementChild.style.display = buttonPrevRev.hasAttribute(
+    'disabled'
+  )
+    ? 'none'
+    : 'block';
+}
+checkStatusRev();
+setTimeout(() => {
+  console.log(buttonPrevRev.hasAttribute('disabled'));
+  checkStatusRev();
+}, 100);
+
 function reviewWapper(arrayLength) {
   new Swiper('.swiper', {
-    modules: [Navigation],
+    modules: [Navigation, Keyboard],
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 50,
     breakpoints: {
       // when window width is >= 320
       320: {
@@ -41,6 +74,10 @@ function reviewWapper(arrayLength) {
     },
     on: {
       slideChange: function () {
+        setTimeout(() => {
+          checkStatusRev();
+        }, 100);
+
         if (this.activeIndex >= arrayLength) {
           // Обмежити перегляд 10 слайдів
           this.slideTo(arrayLength, 0); // Зупинити на 10-му слайді
@@ -57,6 +94,19 @@ function reviewWapper(arrayLength) {
     },
   });
 }
+
+buttonNextRev.addEventListener('click', () => {
+  setTimeout(() => {
+    console.log(buttonPrevRev.hasAttribute('disabled'));
+    checkStatusRev();
+  }, 100);
+});
+buttonPrevRev.addEventListener('click', () => {
+  setTimeout(() => {
+    console.log(buttonPrevRev.hasAttribute('disabled'));
+    checkStatusRev();
+  }, 100);
+});
 
 const ulElement = document.querySelector('.js-list-reviews');
 
