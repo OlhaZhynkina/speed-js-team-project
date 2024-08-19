@@ -1,13 +1,16 @@
-// scroll
+// scroll-up
 
 const scrollUpBtn = document.querySelector('.scroll-up-btn');
 scrollUpBtn.addEventListener('click', scrollToTop);
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'auto',
-    });
+async function scrollToTop() {
+    await new Promise((resolve) => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+        resolve();
+})
 }
 
 function showScrollToTopBtn() {
@@ -17,7 +20,8 @@ function showScrollToTopBtn() {
         scrollUpBtn.classList.add('scroll-up-btn-hidden');
     }
 }
-showScrollToTopBtn();
 
-window.addEventListener('scroll', scrollUpBtn);
+window.addEventListener('scroll', showScrollToTopBtn);
+
+
 
