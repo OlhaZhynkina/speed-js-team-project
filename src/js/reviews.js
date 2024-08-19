@@ -41,7 +41,7 @@ setTimeout(() => {
 }, 100);
 
 function reviewWapper(arrayLength) {
-  new Swiper('.swiper-reviews', {
+  new Swiper('.swiper', {
     modules: [Navigation, Keyboard],
     slidesPerView: 1,
     spaceBetween: 50,
