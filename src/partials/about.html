@@ -13,29 +13,26 @@
         </div>
         <div class="ideas-item">
           <picture
-            ><source
-              srcset="./img/aboute/jef@1x.jpg 1x, ./img/aboute/jef@2x.jpg 2x"
-              media="(max-width: 1440px)"
-            />
-            <source
-              srcset="./img/aboute/jef@1x.jpg 1x, ./img/aboute/jef@2x.jpg 2x"
-              media="(min-width: 768px)"
-            />
-            <source
-              srcset="
-                ./img/aboute/jefmob@1x.jpg 1x,
-                ./img/aboute/jefmob@2x.jpg 2x
-              "
-              media="(max-width: 767px)"
-            />
-            <img
-              class="about-img"
-              src="./img/aboute/jef@1x.jpg"
-              srcset="./img/aboute/jef@2x.jpg"
-              alt="main"
-              width="680"
-              height="700"
-            />
+            > <source
+      srcset="./img/aboute/jefmob@1x.jpg 1x, ./img/aboute/jefmob@2x.jpg 2x"
+      media="(max-width: 767px)"
+    />
+    <source
+      srcset="./img/aboute/jef@1x.jpg 1x, ./img/aboute/jef@2x.jpg 2x"
+      media="(min-width: 768px) and (max-width: 1440px)"
+    />
+    <source
+      srcset="./img/aboute/jef@1x.jpg 1x, ./img/aboute/jef@2x.jpg 2x"
+      media="(min-width: 1441px)"
+    />
+    <img
+      class="about-img"
+      src="./img/aboute/jef@1x.jpg"
+      srcset="./img/aboute/jef@2x.jpg"
+      alt="main"
+      width="680"
+      height="700"
+    />
           </picture>
         </div>
       </div>
@@ -150,14 +147,16 @@
       </div>
     </div>
 
-    <div class="swiper swiper-container">
+
+    <div id="custom-swiper" class="swiper about-swiper-container">
       <ul class="swiper-wrapper swiper-list">
-            <li class="swiper-slide swiper-skills">HTML/CSS</li>
-            <li class="swiper-slide swiper-skills">JavaScript</li>
-            <li class="swiper-slide swiper-skills">React</li>
-            <li class="swiper-slide swiper-skills">Node.js</li>
-            <li class="swiper-slide swiper-skills">React Native</li>
-            <li class="swiper-slide swiper-skills">Soft skills</li>
+            <li class="swiper-slide about-swiper-skills h-circle">HTML/CSS</li>
+            <li class="swiper-slide about-swiper-skills h-circle">JavaScript</li>
+            <li class="swiper-slide about-swiper-skills h-circle">React</li>
+            <li class="swiper-slide about-swiper-skills h-circle">Node.js</li>
+            <li class="swiper-slide about-swiper-skills h-circle">React Native</li>
+            <li class="swiper-slide about-swiper-skills h-circle">Vue.js</li>
+            <li class="swiper-slide about-swiper-skills h-circle">Angular</li>
           </ul>
         </div>
   

@@ -9,6 +9,8 @@ new Accordion('.about-accordion-container', { showMultiple: true });
 
 const swiperAbout = new Swiper('.swiper-container', {
   loop: true,
+
+
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -27,6 +29,10 @@ const swiperAbout = new Swiper('.swiper-container', {
   },
   modules: [Navigation, Keyboard, Mousewheel],
 
+
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+
   // slidesPerView: 1,
   // spaceBetween: 1,
 
@@ -44,9 +50,10 @@ const swiperAbout = new Swiper('.swiper-container', {
   //     spaceBetween: 1,
   //   },
   // },
+
 });
 
-const skillsList = document.querySelectorAll('.swiper-skills');
+const skillsList = document.querySelectorAll('.about-swiper-skills');
 let currentIndex = 0;
 
 function updateActiveClass(index) {
