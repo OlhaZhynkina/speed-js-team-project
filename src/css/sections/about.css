@@ -45,6 +45,7 @@
 }
 
 .about-img {
+  margin: 0;
   border-radius: 24px;
   width: 343px;
   height: 500px;
@@ -122,14 +123,19 @@
   transition: all 0.3s ease;
 }
 
-.swiper.about-swiper-container {
+.about-swiper-container {
   margin-left: 0;
   margin-right: 0;
   margin-top: 32px;
-  padding: 0;
+  overflow: hidden;
 }
 
-.swiper-slide.swiper-skills {
+.swiper-wrapper .swiper-slide {
+  margin-right: 0 !important;
+  overflow: hidden;
+}
+
+#custom-swiper .about-swiper-skills {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
@@ -142,13 +148,15 @@
   width: 130px;
   height: 130px;
   transition: opacity 0.5s ease-in-out;
+  flex-basis: 130px;
+  margin-right: 0;
 }
 
-.swiper-skills.active {
+.about-swiper-skills.active {
   background-color: var(--lime);
 }
 
-.swiper-button-next.about-button-swip {
+.about-button-swip {
   position: absolute;
   right: 0;
   top: 50%;
@@ -159,20 +167,15 @@
   cursor: pointer;
 }
 
-.about-button-swip {
-  background: transparent;
-  border: none;
-}
-
 .about-svg-swip {
   stroke: var(--bg-arrows);
 }
 
-.swiper-button-prev {
+/* .swiper-button-next {
   background: transparent;
   border: none;
   cursor: pointer;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .about-list-text {
@@ -214,9 +217,10 @@
     height: 40px;
   }
 
-  .swiper-skills {
+  .about-swiper-skills {
     width: 200px;
     height: 200px;
+    flex-basis: 200px;
   }
 }
 

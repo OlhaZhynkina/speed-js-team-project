@@ -11,7 +11,7 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   modules: [Navigation, Pagination, Keyboard, Mousewheel],
   loop: true,
   navigation: {
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -29,26 +29,9 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   },
 
   slidesPerView: 'auto',
-
-  breakpoints: {
-    320: {
-      spaceBetween: 0,
-      slidesPerGroup: 1,
-    },
-    768: {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      spaceBetween: 0,
-    },
-    // 1440: {
-    //   slidesPerView: 'auto',
-    //   slidesPerGroup: 1,
-    //   spaceBetween: 0,
-    // },
-  },
 });
 
-const skillsList = document.querySelectorAll('.swiper-skills');
+const skillsList = document.querySelectorAll('.about-swiper-skills');
 let currentIndex = 0;
 
 function updateActiveClass(index) {
