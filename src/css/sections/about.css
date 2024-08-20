@@ -132,6 +132,7 @@
 
 .swiper-wrapper .swiper-slide {
   margin-right: 0 !important;
+  overflow: hidden;
 }
 
 #custom-swiper .about-swiper-skills {
@@ -152,6 +153,7 @@
 
 .about-swiper-skills.active {
   background-color: var(--lime);
+  transition: opacity 0.5s ease-in-out;
 }
 
 .about-button-swip {
@@ -175,30 +177,11 @@
   cursor: pointer;
 } */
 
-.swiper-skills.active {
-  background-color: var(--lime);
-}
-
-.swiper-button-prev,
 .swiper-button-next {
   background: transparent;
   border: none;
   cursor: pointer;
 }
-
-.about-svg-swip {
-  stroke: var(--bg-arrows);
-}
-
-/* .swiper-button-next {
-
-.swiper-button-prev,
-.swiper-button-next {
-
-  background: transparent;
-  border: none;
-  cursor: pointer;
-} */
 
 @media screen and (min-width: 768px) {
   .about-list-text {
