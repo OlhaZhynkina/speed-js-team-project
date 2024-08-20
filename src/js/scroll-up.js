@@ -14,7 +14,7 @@ async function scrollToTop() {
 }
 
 function showScrollToTopBtn() {
-    if (window.scrollY > 1000) {
+    if (window.scrollY > 1300) {
         scrollUpBtn.classList.remove('scroll-up-btn-hidden');
     } else {
         scrollUpBtn.classList.add('scroll-up-btn-hidden');

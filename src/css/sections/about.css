@@ -123,17 +123,29 @@
   transition: all 0.3s ease;
 }
 
+
 .about-swiper-container {
   margin-left: 0;
   margin-right: 0;
+}
+
+.swiper.swiper-container {
+  width: 100%;
   margin-top: 32px;
 }
+
 
 .swiper-wrapper .swiper-slide {
   margin-right: 0 !important;
 }
 
 #custom-swiper .about-swiper-skills {
+.swiper-list {
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-slide.swiper-skills {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
@@ -150,6 +162,7 @@
   overflow: hidden;
 }
 
+
 .about-swiper-skills.active {
   background-color: var(--lime);
 }
@@ -160,6 +173,36 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  }
+  
+/* .swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-slide .swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+} */
+
+.swiper-skills.active {
+  background-color: var(--lime);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -169,7 +212,12 @@
   stroke: var(--bg-arrows);
 }
 
+
 /* .swiper-button-next {
+
+.swiper-button-prev,
+.swiper-button-next {
+
   background: transparent;
   border: none;
   cursor: pointer;

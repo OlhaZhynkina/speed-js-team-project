@@ -33,13 +33,14 @@
           <span class="wt-message" id="email-success"></span>
         </div>
 
-        <div>
+        <div class="contact-form-text">
           <input
             class="wt-form-input comments"
             type="text"
             placeholder="comments"
             required
           />
+          <span class="wt-message-text" id="text-success"></span>
         </div>
 
         <button class="wt-btn s-color" type="submit" disabled>Send</button>
@@ -58,7 +59,9 @@
 <div class="wt-modal-overlay is-hidden">
   <div class="wt-modal-container is-hidden">
     <button class="wt-modal-close-btn">
-      <svg><use href="./img/icons.svg#icon-close"></use></svg>
+      <svg class="wt-modal-close-svg">
+        <use href="./img/icons.svg#icon-close"></use>
+      </svg>
     </button>
 
     <h2 class="wt-modal-title"></h2>
