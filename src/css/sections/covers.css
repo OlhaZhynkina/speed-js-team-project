@@ -2,6 +2,7 @@
   position: relative;
   min-height: 508px;
   overflow: hidden;
+  padding: 0;
 }
 .title-hidden {
   position: absolute;
@@ -46,7 +47,6 @@
   min-width: 320px;
   max-width: 375px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .section {
@@ -169,8 +169,8 @@
     width: 300px;
     height: 300px;
   }
-  .marquee__inner {
-  }
+  /* .marquee__inner {
+  } */
   .column-zero {
     top: -30vh;
     left: 90vh;
