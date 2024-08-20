@@ -2,9 +2,10 @@
 
 .work-together {
   background-color: var(--bg-main);
-  background-image: url(../img/img-work-together/footer.jpg);
+  background-image: url(./img/img-work-together/footer.jpg);
   background-position: right;
   background-repeat: no-repeat;
+  padding-bottom: 32px;
 }
 .wt-title-container {
   display: flex;
@@ -240,6 +241,7 @@
   width: 100%;
   height: 100%;
   display: block;
+  stroke: var(--text);
 }
 
 .wt-modal-title {
@@ -293,8 +295,8 @@
 
 @media screen and (min-width: 768px) {
   .work-together {
-    background-image: url(../img/img-work-together/footer-tablet.jpg);
-    padding-top: 80px;
+    background-image: url(./img/img-work-together/footer-tablet.jpg);
+    padding-top: 88px;
     padding-bottom: 169px;
   }
   .wt-title {
@@ -358,9 +360,8 @@
   }
 
   .work-together {
-    margin-top: 94px;
-    padding: 80px 201px 169px 196px;
-    background-image: url(../img/img-work-together/footer-desktop.jpg);
+    padding: 88px 201px 169px 196px;
+    background-image: url(./img/img-work-together/footer-desktop.jpg);
   }
 
   .contact-form {
