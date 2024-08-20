@@ -1,3 +1,6 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+const section = document.querySelector('marquee__inner');
 document.addEventListener('DOMContentLoaded', () => {
   let options = {
     root: null,
@@ -35,4 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (error) {
     console.error(error.message);
   }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const lightbox = new SimpleLightbox('.marquee__inner a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+  });
 });
