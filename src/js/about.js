@@ -29,6 +29,7 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   },
 
   slidesPerView: 'auto',
+  spaceBetween: 10,
 });
 
 const skillsList = document.querySelectorAll('.about-swiper-skills');
