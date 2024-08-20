@@ -11,10 +11,13 @@ export async function getReviews() {
   }
 }
 
-export async function submitWorkTogetherForm(data) {
+export async function sendWorkTogetherRequest(email, comment) {
   try {
-    const response = await axios.post('/requests', data);
-    return response;
+    const response = await axios.post('/requests', {
+      email: email,
+      comment: comment,
+    });
+    return response.data;
   } catch (err) {
     throw err;
   }

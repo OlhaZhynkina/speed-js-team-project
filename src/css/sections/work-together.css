@@ -1,315 +1,338 @@
 /*Part container*/
-.wt-container {
-  position: relative;
-  margin-top: 64px;
-  margin-bottom: 32px;
+
+.work-together {
+  background-color: var(--bg-main);
+  background-image: url(../img/img-work-together/footer.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
 }
-
-.wt-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
+.wt-title-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
 }
-
-.wt-bg-image {
-  position: absolute;
-  left: 290px;
-  z-index: 0;
-}
-
-/*Part title*/
-
 .work-img {
+  border-radius: 14px;
   width: 44px;
   height: 44px;
 }
-
 .wt-title {
   color: var(--text);
-  font-size: 40px;
   font-weight: 500;
-  line-height: 40px;
-  letter-spacing: -1.2px;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding-top: 32px;
-  margin-bottom: 62px;
 }
-
 .title-highlight {
   color: var(--lime);
+}
+.wt-text {
+  margin-bottom: 64px;
 }
 
 /*Part form*/
 
 .contact-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  margin-bottom: 64px;
 }
-
 .wt-form-input {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border: none;
+  outline: none;
   background-color: transparent;
-  padding-bottom: 20px;
-  color: rgba(250, 250, 250, 0.6);
-  letter-spacing: -0.32px;
+  border-bottom: 1px solid #fafafa33;
+  width: 100%;
+  padding: 0 0 20px 0;
+  margin-bottom: 16px;
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wt-form-input::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
 }
 
-.wt-form-input:active,
-.wt-form-input:focus {
-  color: rgba(250, 250, 250, 1);
-  border: none;
-  border-bottom: 2px solid rgba(250, 250, 250, 0.5);
-  outline: none;
+.wt-form-input:hover,
+.wt-form-input:focus,
+.wt-form-input:active {
+  border-bottom: 1px solid #fafafa80;
+}
+.wt-form-input.success {
+  border-bottom: 1px solid var(--malachite);
 }
 
-.wt-form-input.invalid {
-  border-color: var(--red);
+.wt-form-input:not(:placeholder-shown).error {
+  border-bottom: 1px solid var(--red);
 }
-
-.wt-form-input.valid {
-  border-color: green;
-}
-
-.error-message {
-  color: var(--red);
-  font-size: 14px;
-  margin-top: 4px;
+.wt-message {
   display: none;
-  position: relative;
-}
-
-.success-message {
-  color: green;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
   font-size: 14px;
-  margin-top: 8px;
-  display: none;
-  position: relative;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+
+  margin-top: -12px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.wt-form-input.success + .wt-message {
+  display: block;
+}
+.wt-form-input:not(:placeholder-shown).error + .wt-message {
+  display: block;
 }
 
 .wt-btn {
-  width: 100px;
-  height: 100px;
-  flex-shrink: 0;
-  background-color: var(--lime);
-  border-radius: 50%;
-  border-color: transparent;
-  color: var(--text);
-  letter-spacing: -0.32px;
   margin-top: 32px;
-  margin-bottom: 64px;
-  z-index: 2;
+  width: 100px;
+  padding: 40px 32px 41px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--lime);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.wt-btn:active,
-.wt-btn:hover,
-.wt-btn:focus {
+.wt-btn:hover {
   background-color: var(--lime-hover);
+}
+.wt-btn:disabled {
+  cursor: no-drop;
+}
+.wt-btn:not(:disabled) {
+  cursor: pointer;
+}
+.wt-btn:not(:disabled):active {
+  transform: scale(0.95);
 }
 
 /*Part contact info*/
 
-.contact-info {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
 .wt-contact {
-  border-radius: 60px;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  color: var(--text);
-  font-size: 14px;
   font-weight: 500;
-  letter-spacing: -0.28px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  display: block;
   padding: 10px 12px;
-  z-index: 2;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  background-color: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wt-contact:not(:last-child) {
+  margin-bottom: 16px;
+}
+.wt-contact:hover {
+  border: 1px solid var(--text);
 }
 
-.wt-contact:active,
-.wt-contact:focus,
-.wt-contact:hover {
-  border: 1px solid #fafafa;
+.contact-form div {
+  position: relative;
 }
 
 /*Modal Window*/
 
 .wt-modal-overlay {
-  background: rgba(15, 15, 16, 0.6);
-  border: 1px rgba(250, 250, 250, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(15, 15, 16, 0.6);
   z-index: 999;
+  padding: 0 16px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .wt-modal-container {
-  background: var(--Background, #1c1d20);
-  padding: 20px 20px 64px 32px;
-  border-radius: 20px;
-  border: 1px rgba(250, 250, 250, 0.1);
-  width: 343px;
-  min-height: 276px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  gap: 16px;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: 343px;
+  box-sizing: border-box;
+  background-color: var(--bg-main);
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  z-index: 1000;
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 1.5;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wt-modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   background-color: transparent;
+  color: var(--text);
   border: none;
-  stroke: #fafafa;
-  margin-left: 269px;
-  margin-bottom: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wt-modal-close-btn svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.wt-modal-close-btn use {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .wt-modal-title {
-  color: #fafafa;
-  text-align: center;
-  font-size: 20px;
   font-weight: 600;
-  line-height: 30px;
-  letter-spacing: -0.4px;
-  text-transform: lowercase;
-}
-
-.wt-modal-title::first-letter {
-  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 16px;
 }
 
 .wt-modal-info {
-  color: rgba(250, 250, 250, 0.6);
-  text-align: center;
-  font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.32px;
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.6);
 }
 
 @media screen and (min-width: 768px) {
-  .wt-container {
-    margin-top: 96px;
-    margin-bottom: 169px;
+  .wt-modal-container {
+    padding: 64px;
+    max-width: 492px;
   }
-
-  .wt-bg-image {
-    left: 570px;
+  .wt-modal-close-btn {
+    width: 24px;
+    height: 24px;
   }
+}
 
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .wt-title-container {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 356px) {
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .wt-contact:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work-together {
+    background-image: url(../img/img-work-together/footer-tablet.jpg);
+    padding-top: 80px;
+    padding-bottom: 169px;
+  }
+  .wt-title {
+    font-size: 64px;
+  }
+  .wt-title.together {
+    margin-bottom: 18px;
+  }
   .work-img {
+    border-radius: 24px;
     width: 70px;
     height: 70px;
   }
-
-  .wt-title {
-    font-size: 64px;
-    line-height: 64px;
-    letter-spacing: -1.92px;
-    padding-top: 88px;
-    margin-bottom: 64px;
-  }
-
   .contact-form {
+    margin-bottom: 18px;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 32px;
-    margin-bottom: 78px;
   }
-
   .wt-form-input {
-    height: 44px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
+    margin: 0;
+    width: 245px;
   }
-
+  .wt-message {
+    position: absolute;
+    width: 100%;
+    top: 134%;
+  }
   .wt-btn {
     width: 150px;
-    height: 150px;
     margin: 0;
+    padding: 65px 57px 66px;
   }
-
   .contact-info {
     gap: 8px;
   }
-
   .wt-contact {
-    padding: 18px 32px;
     font-size: 16px;
-    letter-spacing: -0.32px;
-  }
-
-  .wt-modal-container {
-    padding-left: 64px;
-    width: 492px;
-  }
-
-  .wt-modal-close-btn {
-    margin-left: 384px;
-  }
-
-  .wt-modal-title {
-    margin-right: 44px;
-  }
-
-  .wt-modal-info {
-    margin-right: 44px;
+    padding: 18px 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .wt-container {
-    margin-top: 164px;
-    margin-bottom: 169px;
+  .wt-modal-container {
+    padding: 64px;
+    width: 492px;
+    height: 246px;
   }
 
-  .wt-bg-image {
-    left: 860px;
-    position: absolute;
-  }
-
-  .wt-title {
-    max-width: 524px;
-    gap: 10px 20px;
-    padding-top: 80px;
+  .work-together {
+    margin-top: 94px;
+    padding: 80px 201px 169px 196px;
+    background-image: url(../img/img-work-together/footer-desktop.jpg);
   }
 
   .contact-form {
+    width: 100%;
+    align-items: center;
     gap: 32px;
   }
 
   .wt-form-input {
-    min-width: 390px;
+    margin: 0;
+    width: 390px;
+    flex-shrink: 0;
   }
 
   .wt-btn {
+    padding: 65px 57px 66px;
     margin-left: 54px;
+    flex-shrink: 0;
   }
 }
