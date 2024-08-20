@@ -1,23 +1,23 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 new Accordion('.about-accordion-container', { showMultiple: true });
 
-const swiperAbout = new Swiper('.swiper-container', {
+const swiperAbout = new Swiper('.about-swiper-container', {
+  modules: [Navigation, Pagination, Keyboard, Mousewheel],
   loop: true,
-
-
+  navigation: {
+    nextEl: '.swiper-button-next',
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-  navigation: {
-    nextEl: '.swiper-button-next',
-  },
+
   simulateTouch: true,
   keyboard: {
     enabled: true,
@@ -27,30 +27,8 @@ const swiperAbout = new Swiper('.swiper-container', {
   mousewheel: {
     sensitivity: 1,
   },
-  modules: [Navigation, Keyboard, Mousewheel],
-
 
   slidesPerView: 'auto',
-  spaceBetween: 10,
-
-  // slidesPerView: 1,
-  // spaceBetween: 1,
-
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 1,
-  //   },
-  //   768: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 1,
-  //   },
-  //   1440: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 1,
-  //   },
-  // },
-
 });
 
 const skillsList = document.querySelectorAll('.about-swiper-skills');
