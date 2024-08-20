@@ -6,6 +6,9 @@ const emailInput = document.getElementById('email');
 const commentsInput = document.querySelector('.comments');
 const form = document.querySelector('.contact-form');
 const message = document.getElementById('email-success');
+const text = document.getElementById('text-success');
+console.log(text);
+
 const btn = document.querySelector('.wt-btn');
 
 // modal
@@ -15,8 +18,21 @@ const closeModalBtn = document.querySelector('.wt-modal-close-btn');
 const modalTitle = document.querySelector('.wt-modal-title');
 const modalText = document.querySelector('.wt-modal-info');
 
-emailInput.addEventListener('blur', validateEmail);
+emailInput.addEventListener('input', validateEmail);
 commentsInput.addEventListener('input', validateEmail);
+
+const highlightInput = input => {
+  input.classList.add('highlighted');
+  setTimeout(() => {
+    input.classList.remove('highlighted');
+  }, 2000);
+};
+
+btn.addEventListener('click', () => {
+  if (btn.disabled) {
+    highlightInput(commentsInput);
+  }
+});
 
 form.addEventListener('submit', async event => {
   event.preventDefault();
@@ -44,10 +60,14 @@ form.addEventListener('submit', async event => {
     });
   } finally {
     form.reset();
+    btn.disabled = true;
     emailInput.classList.remove('error');
     emailInput.classList.remove('success');
+    commentsInput.classList.remove('error');
+    commentsInput.classList.remove('success');
     message.textContent = '';
-    btn.disabled = true;
+    text.textContent = '';
+    commentsInput.classList.remove('highlighted-wt');
   }
 });
 
@@ -61,14 +81,40 @@ function validateEmail() {
     emailInput.classList.add('success');
     message.textContent = 'Success!';
     message.style.color = '#3cbc81';
+
+    if (!commentIsFilled) {
+      commentsInput.classList.add('highlighted-wt');
+
+      commentsInput.classList.remove('success');
+      commentsInput.classList.add('error');
+      text.textContent = 'Enter a message';
+      text.style.color = '#e74a3b';
+    } else {
+      commentsInput.classList.remove('highlighted-wt');
+
+      commentsInput.classList.remove('error');
+      commentsInput.classList.add('success');
+      text.textContent = 'Success!';
+      text.style.color = '#3cbc81';
+    }
   } else {
     emailInput.classList.remove('success');
     emailInput.classList.add('error');
     message.textContent = 'Invalid email, try again';
     message.style.color = '#e74a3b';
+
+    commentsInput.classList.remove('highlighted-wt');
+
+    commentsInput.classList.remove('success');
+    commentsInput.classList.remove('error');
+    text.textContent = '';
   }
 
   btn.disabled = !(emailIsValid && commentIsFilled);
+
+  btn.disabled
+    ? (btn.style.backgroundColor = '#3B3B3B')
+    : (btn.style.backgroundColor = '');
 }
 
 btn.addEventListener('click', () => {

@@ -96,6 +96,7 @@
 .wt-form-input.success + .wt-message {
   display: block;
 }
+
 .wt-form-input:not(:placeholder-shown).error + .wt-message {
   display: block;
 }
@@ -149,6 +150,33 @@
 }
 
 .contact-form div {
+  position: relative;
+}
+
+.wt-message-text {
+  position: absolute;
+  width: 100%;
+  top: 134%;
+}
+
+.wt-message-text {
+  display: none;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  margin-top: -12px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.comments.success + .wt-message-text,
+.comments.error + .wt-message-text {
+  display: block;
+}
+
+.contact-form-text {
   position: relative;
 }
 
@@ -207,28 +235,33 @@
   justify-content: center;
   align-items: center;
 }
-.wt-modal-close-btn svg {
+
+.wt-modal-close-svg {
   width: 100%;
   height: 100%;
   display: block;
-}
-.wt-modal-close-btn use {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 .wt-modal-title {
-  font-weight: 600;
   font-size: 20px;
+  font-weight: 600;
   color: var(--text);
   margin-bottom: 16px;
 }
 
 .wt-modal-info {
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+
+  text-align: center;
+
   font-weight: 500;
   font-size: 16px;
   color: rgba(250, 250, 250, 0.6);
+}
+
+.highlighted-wt {
+  border-bottom: 1px solid var(--red);
 }
 
 @media screen and (min-width: 768px) {
@@ -302,6 +335,18 @@
   .wt-contact {
     font-size: 16px;
     padding: 18px 32px;
+  }
+
+  .wt-modal-title {
+    width: 364px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+  }
+
+  .wt-modal-info {
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    width: 364px;
   }
 }
 
