@@ -1,5 +1,3 @@
-/* ==================MOBILE=========================== */
-
 .container-benefits {
   display: flex;
   flex-direction: column;
@@ -80,8 +78,6 @@
   color: var(--text);
 }
 
-/*! ===============SCROLL-UP================= !*/
-
 .scroll-up-btn {
   position: fixed;
   bottom: 15px;
@@ -109,10 +105,6 @@
   display: none;
 }
 
-/* =========================SCROLL-UP-END====================== */
-
-/* =======================TABLET=========================== */
-
 @media screen and (min-width: 768px) {
   .container-benefits {
     padding-left: 32px;
@@ -131,8 +123,6 @@
     width: 344px;
   }
 }
-
-/* ===========================DEXTOP===================== */
 
 @media screen and (min-width: 1440px) {
   .container-benefits {
