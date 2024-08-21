@@ -10,59 +10,77 @@
   box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
-.btn-container {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  bottom: 102px;
-  margin-left: 32px;
-}
-
-.main-button {
-  width: 130px;
-  height: 45px;
-  border-radius: 60px;
-  background-color: transparent;
-  border: 1px solid white;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  color: white;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  position: relative;
-  z-index: 2;
-}
-
-.main-button:hover,
-.main-button:focus {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.color-buttons {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  top: 50%;
-  transform: translateY(-50%) translateX(0);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s, transform 0.3s;
-  z-index: 1;
-}
-
 @media screen and (max-width: 767px) {
   .btn-container {
-    right: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 130px;
+    margin-left: 32px;
+    right: 32px;
     left: auto;
   }
 
+  .main-button {
+    width: 130px;
+    height: 45px;
+    border-radius: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+  }
+
+  .main-button:hover,
+  .main-button:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .color-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
     right: 100%;
+
     left: auto;
     transform: translateY(-50%) translateX(0);
+  }
+
+  .color-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .color-button:active,
+  .color-button:focus,
+  .color-button:hover {
+    border-color: #fff;
+  }
+
+  .color-text {
+    transition: color 0.3s;
+  }
+
+  .hidden {
+    opacity: 0;
   }
 
   .color-buttons.show {
@@ -74,51 +92,98 @@
 
 @media screen and (min-width: 768px) {
   .btn-container {
-    left: 20px;
-    right: auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    margin-left: 32px;
+    right: 90px;
+    left: auto;
+  }
+
+  .main-button {
+    width: 130px;
+    height: 45px;
+    border-radius: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+  }
+  .main-button:hover,
+  .main-button:focus {
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   .color-buttons {
-    left: 100%;
-    right: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    top: 50%;
     transform: translateY(-50%) translateX(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
+    right: 100%;
+
+    left: auto;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .color-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
   }
 
   .color-buttons.show {
     opacity: 1;
     pointer-events: all;
+    transform: translateY(-50%) translateX(-10px);
+  }
+  .color-button:active,
+  .color-button:focus,
+  .color-button:hover {
+    border-color: #fff;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .btn-container {
+    bottom: 102px;
+    margin-left: 32px;
+    left: 220px;
+    right: auto;
+  }
+
+  .main-button {
+  }
+
+  .color-buttons {
+    left: 100%;
+    right: auto;
+  }
+
+  .color-button {
+  }
+  .color-buttons.show {
     transform: translateY(-50%) translateX(20px);
   }
 }
 
-.color-button {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-}
-
-.color-button:active,
-.color-button:focus,
-.color-button:hover {
-  border-color: #fff;
-}
-
-.g-color {
-}
-
-.s-color {
-}
-
-.color-text {
-  transition: color 0.3s;
-}
-
-.hidden {
-  opacity: 0;
-}
+/* //////// */
 
 .red-clr /*#ed3b44*/ {
   background: repeating-linear-gradient(
