@@ -1,6 +1,3 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
 document.addEventListener('DOMContentLoaded', function () {
   let options = {
     root: null,
@@ -29,9 +26,4 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     console.error('Елемент .covers-section не знайдено');
   }
-
-  const lightbox = new SimpleLightbox('.marquee__inner a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
 });
