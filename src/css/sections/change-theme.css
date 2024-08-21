@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 767px) {
   .all-c-btns {
-    padding-left: 230px;
+    padding-left: 248px;
   }
 
   .btn-container {
@@ -24,11 +24,11 @@
   }
 
   .main-button {
-    width: 130px;
-    height: 45px;
+    width: 109px;
+    height: 37px;
     border-radius: 60px;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid rgba(250, 250, 250, 0.2);
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     color: white;
@@ -110,12 +110,12 @@
     height: 55px;
     border-radius: 60px;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid rgba(250, 250, 250, 0.2);
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     color: white;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: -0.02em;
     position: relative;
     z-index: 2;
@@ -171,6 +171,7 @@
   }
 
   .main-button {
+    border: 1px solid white;
   }
 
   .color-buttons {
