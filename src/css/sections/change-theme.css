@@ -2,36 +2,6 @@
   transition: background-color 0.3s;
 }
 
-.cool-color-lime:hover,
-.cool-color-lime:active {
-  background-color: #c6e327;
-}
-
-.cool-color-blue:hover,
-.cool-color-blue:active {
-  background-color: #0041e8;
-}
-
-.cool-color-red:hover,
-.cool-color-red:active {
-  background-color: #ed3b44;
-}
-
-.cool-color-purple:hover,
-.cool-color-purple:active {
-  background-color: #b662dd;
-}
-
-.cool-color-teal:hover,
-.cool-color-teal:active {
-  background-color: #237f76;
-}
-
-.cool-color-orange:hover,
-.cool-color-orange:active {
-  background-color: #ff7f08;
-}
-
 .s-color {
   transition: box-shadow 0.3s ease;
 }
