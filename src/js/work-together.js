@@ -7,11 +7,9 @@ const commentsInput = document.querySelector('.comments');
 const form = document.querySelector('.contact-form');
 const message = document.getElementById('email-success');
 const text = document.getElementById('text-success');
-console.log(text);
 
 const btn = document.querySelector('.wt-btn');
 
-// modal
 const overlay = document.querySelector('.wt-modal-overlay');
 const modal = document.querySelector('.wt-modal-container');
 const closeModalBtn = document.querySelector('.wt-modal-close-btn');
