@@ -19,8 +19,8 @@
 
 .hero-ridges {
   display: flex;
-  min-width: 55%;
-  max-width: 840px;
+  min-width: 100%;
+  max-width: 500px;
   height: 100%;
   background: repeating-linear-gradient(
       90deg,
@@ -40,6 +40,18 @@
 
   background-blend-mode: overlay;
   transform: translateX(-1.66%);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-ridges {
+    min-width: 73%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero-ridges {
+    min-width: 60%;
+  }
 }
 
 .hero-title {
