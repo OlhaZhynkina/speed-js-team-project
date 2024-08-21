@@ -11,15 +11,16 @@
 }
 
 @media screen and (max-width: 767px) {
+  .all-c-btns {
+    padding-left: 230px;
+  }
+
   .btn-container {
     display: flex;
     align-items: center;
     position: absolute;
     z-index: 1;
-    bottom: 130px;
-    margin-left: 32px;
-    right: 32px;
-    left: auto;
+    bottom: 80px;
   }
 
   .main-button {
@@ -91,20 +92,22 @@
 }
 
 @media screen and (min-width: 768px) {
+  .all-c-btns {
+    padding-left: 608px;
+  }
+
   .btn-container {
     display: flex;
     align-items: center;
     position: absolute;
     z-index: 1;
-    bottom: -50px;
-    margin-left: 32px;
-    right: 90px;
-    left: auto;
+    bottom: 102px;
+    /* padding-left: 604px; */
   }
 
   .main-button {
     width: 130px;
-    height: 45px;
+    height: 55px;
     border-radius: 60px;
     background-color: transparent;
     border: 1px solid white;
@@ -126,7 +129,7 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
     top: 50%;
     transform: translateY(-50%) translateX(0);
     opacity: 0;
@@ -162,10 +165,9 @@
 
 @media screen and (min-width: 1140px) {
   .btn-container {
-    bottom: 102px;
-    margin-left: 32px;
+    bottom: 33px;
+    padding-left: 32px;
     left: 220px;
-    right: auto;
   }
 
   .main-button {
