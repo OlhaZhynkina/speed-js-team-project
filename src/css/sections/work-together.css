@@ -2,9 +2,10 @@
 
 .work-together {
   background-color: var(--bg-main);
-  /* background-image: url(./img/img-work-together/footer.jpg); */
+  background-image: url(/img/img-work-together/work-together-bg-mob.png);
   background-position: right;
   background-repeat: no-repeat;
+  padding-top: 32px;
   padding-bottom: 32px;
 }
 .wt-title-container {
@@ -295,7 +296,7 @@
 
 @media screen and (min-width: 768px) {
   .work-together {
-    /* background-image: url(./img/img-work-together/footer-tablet.jpg); */
+    background-image: url(/img/img-work-together/work-together-bg-tab.png);
     padding-top: 88px;
     padding-bottom: 169px;
   }
@@ -361,7 +362,7 @@
 
   .work-together {
     padding: 88px 201px 169px 196px;
-    /* background-image: url(./img/img-work-together/footer-desktop.jpg); */
+    background-image: url(/img/img-work-together/work-together-bg-desk.png);
   }
 
   .contact-form {
