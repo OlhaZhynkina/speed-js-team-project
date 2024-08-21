@@ -73,4 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
   mainButton.addEventListener('click', () => {
     colorButtons.classList.toggle('show');
   });
+
+  document.addEventListener('click', event => {
+    if (
+      !colorButtons.contains(event.target) &&
+      !mainButton.contains(event.target)
+    ) {
+      colorButtons.classList.remove('show');
+    }
+  });
 });
