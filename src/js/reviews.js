@@ -96,13 +96,11 @@ function reviewWapper(arrayLength) {
 
 buttonNextRev.addEventListener('click', () => {
   setTimeout(() => {
-    console.log(buttonPrevRev.hasAttribute('disabled'));
     checkStatusRev();
   }, 100);
 });
 buttonPrevRev.addEventListener('click', () => {
   setTimeout(() => {
-    console.log(buttonPrevRev.hasAttribute('disabled'));
     checkStatusRev();
   }, 100);
 });

@@ -3,6 +3,7 @@
   padding-bottom: 32px;
   position: absolute;
   z-index: 1000;
+  width: 100%;
 }
 .header-container {
   display: flex;
