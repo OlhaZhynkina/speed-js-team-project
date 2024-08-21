@@ -42,6 +42,7 @@ function updateActiveClass(index) {
     }
   });
 }
+const a = '3';
 
 updateActiveClass(currentIndex);
 
