@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
+
 import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 import Accordion from 'accordion-js';
@@ -13,7 +14,7 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   loop: true,
   modules: [Navigation, Pagination, Keyboard, Mousewheel],
   navigation: {
-    prevEl: '.swiper-button-next',
+    nextEl: '.swiper-button-next',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -31,25 +32,25 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   },
 });
 
-const skillsList = document.querySelectorAll('.about-swiper-skills');
-let currentIndex = 0;
+// const skillsList = document.querySelectorAll('.about-swiper-skills');
+// let currentIndex = 0;
 
-function updateActiveClass(index) {
-  skillsList.forEach((skill, i) => {
-    skill.classList.remove('active');
-    if (i === index) {
-      skill.classList.add('active');
-    }
-  });
-}
-const a = '3';
+// function updateActiveClass(index) {
+//   skillsList.forEach((skill, i) => {
+//     skill.classList.remove('active');
+//     if (i === index) {
+//       skill.classList.add('active');
+//     }
+//   });
+// }
+// const a = '3';
 
-updateActiveClass(currentIndex);
+// updateActiveClass(currentIndex);
 
-document.querySelector('.swiper-button-next').addEventListener('click', () => {
-  skillsList[currentIndex].classList.remove('active');
+// document.querySelector('.swiper-button-next').addEventListener('click', () => {
+//   skillsList[currentIndex].classList.remove('active');
 
-  currentIndex = (currentIndex + 1) % skillsList.length;
+//   currentIndex = (currentIndex + 1) % skillsList.length;
 
-  skillsList[currentIndex].classList.add('active');
-});
+//   skillsList[currentIndex].classList.add('active');
+// });

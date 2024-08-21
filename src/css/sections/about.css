@@ -123,17 +123,13 @@
   transition: all 0.3s ease;
 }
 
-.about-swiper-container {
-  /* margin-left: 0;
-  margin-right: 0; */
-  margin-top: 32px;
-  /* overflow: hidden; */
-}
+#custom-swiper {
+  display: flex;
 
-.swiper-list {
-  max-width: 260px;
+  align-items: center;
+  gap: 55px;
 
-  overflow: hidden;
+  margin: 32px auto 0 auto;
 }
 
 #custom-swiper .about-swiper-skills {
@@ -152,22 +148,16 @@
   flex-basis: 130px;
 }
 
-#custom-swiper {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  gap: 55px;
+.swiper-list {
+  max-width: 260px;
 }
+
 .about-swiper-skills.active {
   background-color: var(--lime);
   transition: opacity 0.5s ease-in-out;
 }
 
 .about-button-swip {
-  /* position: absolute;
-  right: 0;
-  top: 50%; */
-  /* transform: translateY(-50%); */
   z-index: 10;
   background: transparent;
   border: none;
@@ -187,6 +177,15 @@
 .about-button-swip {
   width: 28px;
   height: 28px;
+}
+
+#custom-swiper .about-swiper-skills.swiper-slide-active {
+  background-color: salmon;
+  /* добавити колір через js для var() */
+}
+
+.about-swiper-container li {
+  margin-right: 0 !important;
 }
 
 @media screen and (min-width: 768px) {
