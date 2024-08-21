@@ -178,11 +178,11 @@
   width: 28px;
   height: 28px;
 }
-
+/* 
 #custom-swiper .about-swiper-skills.swiper-slide-active {
   background-color: salmon;
-  /* добавити колір через js для var() */
-}
+  
+} */
 
 .about-swiper-container li {
   margin-right: 0 !important;

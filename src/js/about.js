@@ -32,25 +32,26 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   },
 });
 
-// const skillsList = document.querySelectorAll('.about-swiper-skills');
-// let currentIndex = 0;
+function updateActiveSlideColor() {
+  document
+    .querySelectorAll('#custom-swiper .about-swiper-skills')
+    .forEach(slide => {
+      slide.style.removeProperty('background-color');
+    });
 
-// function updateActiveClass(index) {
-//   skillsList.forEach((skill, i) => {
-//     skill.classList.remove('active');
-//     if (i === index) {
-//       skill.classList.add('active');
-//     }
-//   });
-// }
-// const a = '3';
+  const activeSlide = document.querySelector(
+    '#custom-swiper .about-swiper-skills.swiper-slide-active'
+  );
+  if (activeSlide) {
+    const selectedColor = localStorage.getItem('selectedColor') || '#c6e327';
+    activeSlide.style.setProperty(
+      'background-color',
+      selectedColor,
+      'important'
+    );
+  }
+}
 
-// updateActiveClass(currentIndex);
+updateActiveSlideColor();
 
-// document.querySelector('.swiper-button-next').addEventListener('click', () => {
-//   skillsList[currentIndex].classList.remove('active');
-
-//   currentIndex = (currentIndex + 1) % skillsList.length;
-
-//   skillsList[currentIndex].classList.add('active');
-// });
+swiperAbout.on('slideChangeTransitionEnd', updateActiveSlideColor);

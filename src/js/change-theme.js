@@ -57,16 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   };
 
-  const savedColor = localStorage.getItem('selectedColor');
-  if (savedColor) {
-    applyColor(savedColor);
-  }
+  const defaultColor = '#c6e327';
+
+  const savedColor = localStorage.getItem('selectedColor') || defaultColor;
+  applyColor(savedColor);
 
   colorButtonElements.forEach(button => {
     button.addEventListener('click', () => {
       const color = button.getAttribute('data-color').toLowerCase();
       localStorage.setItem('selectedColor', color);
-      applyColor(color);
+
+      history.replaceState(null, '', window.location.href);
+      location.reload();
     });
   });
 
