@@ -124,14 +124,15 @@
 }
 
 .about-swiper-container {
-  margin-left: 0;
-  margin-right: 0;
+  /* margin-left: 0;
+  margin-right: 0; */
   margin-top: 32px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.swiper-wrapper .swiper-slide {
-  margin-right: 0 !important;
+.swiper-list {
+  max-width: 260px;
+
   overflow: hidden;
 }
 
@@ -151,16 +152,22 @@
   flex-basis: 130px;
 }
 
+#custom-swiper {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 55px;
+}
 .about-swiper-skills.active {
   background-color: var(--lime);
   transition: opacity 0.5s ease-in-out;
 }
 
 .about-button-swip {
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; */
+  /* transform: translateY(-50%); */
   z-index: 10;
   background: transparent;
   border: none;
@@ -171,16 +178,15 @@
   stroke: var(--bg-arrows);
 }
 
-/* .swiper-button-next {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-} */
-
 .swiper-button-next {
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.about-button-swip {
+  width: 28px;
+  height: 28px;
 }
 
 @media screen and (min-width: 768px) {
@@ -223,10 +229,23 @@
     height: 40px;
   }
 
+  #custom-swiper {
+    gap: 64px;
+  }
+
   #custom-swiper .about-swiper-skills {
     width: 200px;
     height: 200px;
     flex-basis: 200px;
+  }
+
+  .about-button-swip {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-list {
+    max-width: 600px;
   }
 }
 
@@ -272,5 +291,14 @@
 
   .education-list-t {
     width: 465px;
+  }
+
+  #custom-swiper {
+    gap: 72px;
+    width: 1312px;
+  }
+
+  .swiper-list {
+    max-width: 1200px;
   }
 }

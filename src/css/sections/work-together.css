@@ -2,7 +2,7 @@
 
 .work-together {
   background-color: var(--bg-main);
-  background-image: url(./img/img-work-together/footer.jpg);
+  /* background-image: url(./img/img-work-together/footer.jpg); */
   background-position: right;
   background-repeat: no-repeat;
   padding-bottom: 32px;
@@ -295,7 +295,7 @@
 
 @media screen and (min-width: 768px) {
   .work-together {
-    background-image: url(./img/img-work-together/footer-tablet.jpg);
+    /* background-image: url(./img/img-work-together/footer-tablet.jpg); */
     padding-top: 88px;
     padding-bottom: 169px;
   }
@@ -361,7 +361,7 @@
 
   .work-together {
     padding: 88px 201px 169px 196px;
-    background-image: url(./img/img-work-together/footer-desktop.jpg);
+    /* background-image: url(./img/img-work-together/footer-desktop.jpg); */
   }
 
   .contact-form {

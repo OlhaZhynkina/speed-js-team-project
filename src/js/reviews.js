@@ -36,7 +36,6 @@ function checkStatusRev() {
 }
 checkStatusRev();
 setTimeout(() => {
-  console.log(buttonPrevRev.hasAttribute('disabled'));
   checkStatusRev();
 }, 100);
 

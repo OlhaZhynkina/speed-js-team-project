@@ -8,10 +8,12 @@ import 'accordion-js/dist/accordion.min.css';
 new Accordion('.about-accordion-container', { showMultiple: true });
 
 const swiperAbout = new Swiper('.about-swiper-container', {
-  modules: [Navigation, Pagination, Keyboard, Mousewheel],
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   loop: true,
+  modules: [Navigation, Pagination, Keyboard, Mousewheel],
   navigation: {
-    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-next',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -27,8 +29,6 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   mousewheel: {
     sensitivity: 1,
   },
-
-  slidesPerView: 'auto',
 });
 
 const skillsList = document.querySelectorAll('.about-swiper-skills');
@@ -42,6 +42,7 @@ function updateActiveClass(index) {
     }
   });
 }
+const a = '3';
 
 updateActiveClass(currentIndex);
 
