@@ -2,7 +2,7 @@
 
 .work-together {
   background-color: var(--bg-main);
-  background-image: url(./img/img-work-together/work-together-bg-mob.png);
+  background-image: url(/img/img-work-together/work-together-bg-mob.png);
   background-position: right;
   background-repeat: no-repeat;
   padding-top: 32px;
@@ -296,7 +296,7 @@
 
 @media screen and (min-width: 768px) {
   .work-together {
-    background-image: url(./img/img-work-together/work-together-bg-tab.png);
+    background-image: url(/img/img-work-together/work-together-bg-tab.png);
     padding-top: 88px;
     padding-bottom: 169px;
   }
@@ -362,7 +362,7 @@
 
   .work-together {
     padding: 88px 201px 169px 196px;
-    background-image: url(./img/img-work-together/work-together-bg-desk.png);
+    background-image: url(/img/img-work-together/work-together-bg-desk.png);
   }
 
   .contact-form {
