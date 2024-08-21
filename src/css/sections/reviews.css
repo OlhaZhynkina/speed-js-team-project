@@ -65,9 +65,9 @@
 .review-btn-container .review-btn {
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
-  padding: 18px;
-  width: 68px;
-  height: 68px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -103,6 +103,10 @@
   }
   .text-review {
     width: 296px;
+  }
+  .review-btn-container .review-btn {
+    width: 68px;
+    height: 68px;
   }
 }
 
