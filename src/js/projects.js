@@ -2,8 +2,6 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
-console.log('message');
-
 const swiperProjects = new Swiper('.swiper-projects', {
   modules: [Navigation, Keyboard],
   slidesPerView: 1,
