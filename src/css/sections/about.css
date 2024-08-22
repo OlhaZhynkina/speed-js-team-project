@@ -36,6 +36,15 @@
   width: 279px;
 }
 
+@media (max-width: 374px) {
+  .about-list-text {
+    width: 100%;
+  }
+  .about-text {
+    width: 230px;
+  }
+}
+
 .colortext {
   color: var(--lime);
 }
