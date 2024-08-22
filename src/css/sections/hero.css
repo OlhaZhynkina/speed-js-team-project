@@ -102,7 +102,7 @@
 .hero-item {
   border-radius: 60px;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  transition: border-color var(--text);
+  transition: border-color 0.3s;
 }
 .hero-item:hover,
 .hero-item:focus,
@@ -125,7 +125,7 @@
 .heder-contact-info {
   border-radius: 60px;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  transition: border-color var(--text);
+  transition: border-color 0.3s;
   color: var(--text);
 }
 .heder-contact-info:hover,

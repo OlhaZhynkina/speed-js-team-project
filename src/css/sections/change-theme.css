@@ -179,8 +179,6 @@
     right: auto;
   }
 
-  .color-button {
-  }
   .color-buttons.show {
     transform: translateY(-50%) translateX(20px);
   }
