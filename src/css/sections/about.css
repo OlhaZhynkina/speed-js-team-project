@@ -45,6 +45,7 @@
 }
 
 .about-img {
+  object-fit: cover;
   margin: 0;
   border-radius: 24px;
   width: 343px;

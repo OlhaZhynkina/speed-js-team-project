@@ -7,7 +7,7 @@ const commentsInput = document.querySelector('.comments');
 const form = document.querySelector('.contact-form');
 const message = document.getElementById('email-success');
 const text = document.getElementById('text-success');
-console.log(text);
+// console.log(text);
 
 const btn = document.querySelector('.wt-btn');
 
