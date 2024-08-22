@@ -7,6 +7,7 @@ const commentsInput = document.querySelector('.comments');
 const form = document.querySelector('.contact-form');
 const message = document.getElementById('email-success');
 const text = document.getElementById('text-success');
+console.log(text);
 
 const btn = document.querySelector('.wt-btn');
 
@@ -15,6 +16,13 @@ const modal = document.querySelector('.wt-modal-container');
 const closeModalBtn = document.querySelector('.wt-modal-close-btn');
 const modalTitle = document.querySelector('.wt-modal-title');
 const modalText = document.querySelector('.wt-modal-info');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedColor = localStorage.getItem('selectedColor');
+  if (savedColor) {
+    btn.style.backgroundColor = savedColor;
+  }
+});
 
 emailInput.addEventListener('input', validateEmail);
 commentsInput.addEventListener('input', validateEmail);
@@ -110,9 +118,12 @@ function validateEmail() {
 
   btn.disabled = !(emailIsValid && commentIsFilled);
 
-  btn.disabled
-    ? (btn.style.backgroundColor = '#3B3B3B')
-    : (btn.style.backgroundColor = '');
+  if (btn.disabled) {
+    btn.style.backgroundColor = '#3B3B3B';
+  } else {
+    const savedColor = localStorage.getItem('selectedColor');
+    btn.style.backgroundColor = savedColor || '';
+  }
 }
 
 btn.addEventListener('click', () => {

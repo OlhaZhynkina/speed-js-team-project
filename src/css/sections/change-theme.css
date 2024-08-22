@@ -167,7 +167,7 @@
   .btn-container {
     bottom: 33px;
     padding-left: 32px;
-    left: 220px;
+    left: 20px;
   }
 
   .main-button {
@@ -257,4 +257,29 @@
       /* 57% */ rgba(127, 127, 127, 0.2) 8.33% /* 100% */
     ),
     linear-gradient(90deg, #ff7f08 0%, #ac5300 32%, var(--bg-main) 50%);
+}
+
+/* ..... */
+.red-clr-circle /*#ed3b44*/ {
+  background-color: #ed3b44;
+}
+
+.blue-clr-circle /*#0041e8*/ {
+  background-color: #0041e8;
+}
+
+.yellow-clr-circle /*#c6e327*/ {
+  background-color: #c6e327;
+}
+
+.purple-clr-circle /*#b662dd*/ {
+  background-color: #b662dd;
+}
+
+.green-clr-circle /*#237f76*/ {
+  background-color: #237f76;
+}
+
+.orange-clr-circle /*#ff7f08*/ {
+  background-color: #ff7f08;
 }
